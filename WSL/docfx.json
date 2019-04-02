@@ -1,0 +1,46 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "breadcrumb_path": "/windows/wsl/breadcrumb/toc.json",
+      "extendBreadcrumb": true,
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/WSL",
+      "ms.prod" : "windows-subsystem-for-linux",
+      "feedback_product_url": "https://github.com/Microsoft/WSL/issues"
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "wsl",
+    "markdownEngineName": "markdig"
+  }
+}
