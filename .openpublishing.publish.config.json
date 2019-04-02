@@ -4,7 +4,7 @@
       "docset_name": "wsl",
       "build_source_folder": "WSL",
       "build_output_subfolder": "wsl",
-      "locale": "zh-TW",
+      "locale": "zh-tw",
       "monikers": [],
       "moniker_ranges": [],
       "open_to_public_contributors": false,
@@ -20,7 +20,7 @@
   "notification_subscribers": [],
   "branches_to_filter": [
     "live-sxs",
-    "master-sxs"
+    "live"
   ],
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
@@ -28,7 +28,7 @@
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.zh-TW",
+      "url": "https://github.com/Microsoft/templates.docs.msft.zh-tw",
       "branch": "master",
       "branch_mapping": {}
     },
