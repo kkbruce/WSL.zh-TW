@@ -1,22 +1,21 @@
-# Windows Subsystem for Linux (WSL) Documentation
+# <a name="windows-subsystem-for-linux-wsl-documentation"></a>Windows 子系統 (WSL) Linux 文件
 
-## Issues
-If you find doc issues / errors or have an improvement you'd like to suggest, please file an issue and/or submit a pull-request - we greatly appreciate PR's in particular :)
+## <a name="issues"></a>問題
+如果您找出文件問題 / 錯誤或有您想要建議，請提出問題及/或提交提取要求改進-我們感謝 PR 的特別:)
 
-> **Note:** This repo's issue tracker is only for reporting issues with the WSL docs.
-> Other related issue repo's:
+> **注意：** 此存放庫問題追蹤器是只用於報告問題與 WSL 文件。其他相關的問題存放庫的：
 > * WSL: https://github.com/Microsoft/WSL/
-> * Windows Console: https://github.com/Microsoft/Console/
+> * Windows 主控台： https://github.com/Microsoft/Console/
 
-## External Links
+## <a name="external-links"></a>外部連結
 
-[Rendered documentation website](https://docs.microsoft.com/windows/wsl/) 
+[轉譯的文件網站](https://docs.microsoft.com/windows/wsl/) 
 
-[Release notes for WSL](https://docs.microsoft.com/en-us/windows/wsl/release-notes)
+[WSL 的版本資訊](https://docs.microsoft.com/en-us/windows/wsl/release-notes)
 
-## Microsoft Open Source Code of Conduct
+## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 開放原始碼管理辦法
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+此專案已採用[Microsoft 開放來源辦法](https://opensource.microsoft.com/codeofconduct/)。
+如需詳細資訊，請參閱[程式碼的管理辦法常見問題集](https://opensource.microsoft.com/codeofconduct/faq/)，或連絡[ opencode@microsoft.com ](mailto:opencode@microsoft.com)有任何其他問題或意見。
 
-Welcome to the markdown source for Microsoft's command-line shells and console documentation.
+歡迎使用 Microsoft 的命令列殼層的 markdown 來源及主控台文件。
