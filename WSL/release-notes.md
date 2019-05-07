@@ -7,14 +7,27 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: 3eee7ff6d1f8302e98cde84fccabf5d9113c83f2
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.openlocfilehash: 2567e68ca0e9897a7b7bc7315760b81ff4923c1a
+ms.sourcegitcommit: 8c74868b8d8ff0106e15e4bce5e8337642883ec1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "59063626"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64988256"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>適用於 Linux 的 Windows 子系統的版本資訊
+
+## <a name="build-18890"></a>建置 18890
+一般 Windows 組建 18890 的詳細資訊請造訪[Windows 部落格](https://blogs.windows.com/windowsexperience/2019/05/01/announcing-windows-10-insider-preview-build-18890/)。
+
+### <a name="wsl"></a>WSL
+* 非封鎖通訊端遺漏 [GH 2913]
+* 終端機 EOF 輸入可能會封鎖後續的讀取 [GH 3421]
+* 更新 resolv.conf 標頭，指向 [述 GH 3928] wsl.conf
+* Epoll 刪除程式碼 [GH 3922] 中的死結
+* 處理中的引數-匯入和 – 匯出 [GH 3932] 空間
+* 擴充 mmap 會檔案無法正常運作 [GH 3939]
+* 修正問題 ARM64 \\wsl$ 存取未正常運作
+* 新增 wsl.exe 更好的預設圖示
 
 ## <a name="build-18342"></a>建置 18342
 一般 Windows 組建 18342 的詳細資訊請造訪[Windows 部落格](https://blogs.windows.com/windowsexperience/2019/02/20/announcing-windows-10-insider-preview-build-18342/)。
@@ -276,7 +289,7 @@ wslconfig.exe /terminate <DistributionName>
     * 請參閱[部落格](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/)如需詳細資訊。
 * 新增 wslconfig/終止停止執行的散發套件。
 
-## <a name="build-17692"></a>建置 17692
+## <a name="build-17692"></a>組建 17692
 一般 Windows 組建 17692 的詳細資訊請造訪[Windows 部落格](https://blogs.windows.com/windowsexperience/2018/06/14/announcing-windows-10-insider-preview-build-17692)。
 
 ### <a name="wsl"></a>WSL
@@ -285,7 +298,7 @@ wslconfig.exe /terminate <DistributionName>
 * ARM64:模擬快取的維護作業。 解決[dotnet 問題](https://github.com/dotnet/core/issues/1561)。
 * DrvFs： 只有 unescape 私用範圍內對應的字元逸出字元。
 
-## <a name="build-17686"></a>建置 17686
+## <a name="build-17686"></a>組建 17686
 一般 Windows 組建 17686 的詳細資訊請造訪[Windows 部落格](https://blogs.windows.com/windowsexperience/2018/06/06/announcing-windows-10-insider-preview-build-17686)。
 
 ### <a name="wsl"></a>WSL
@@ -349,8 +362,7 @@ wslconfig.exe /terminate <DistributionName>
 * 新增支援 futex 感知 pi 的作業。 [GH 1006]
     * 請注意，優先順序而不是目前支援的 WSL 功能因此有一些限制，但標準使用量應該要解除封鎖。
 * WSL 程序的 Windows 防火牆支援。 [GH 1852]
-    * 比方說，若要允許 WSL python 則會接聽任何通訊埠，請使用提高權限的 Windows cmd 處理：
-```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
+    * 比方說，若要允許 WSL python 則會接聽任何通訊埠，請使用提高權限的 Windows cmd 處理： ```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
     * 如需有關如何新增防火牆規則的詳細資訊，請參閱[連結](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)
 * 使用 wsl.exe 時，請採用使用者的預設殼層。 [GH 2372]
 * 報告為乙太網路的所有網路介面。 [GH 2996]
@@ -375,7 +387,7 @@ wslconfig.exe /terminate <DistributionName>
 ### <a name="ltp-results"></a>LTP 結果：
 在進行測試。
 
-## <a name="build-17110"></a>建置 17110
+## <a name="build-17110"></a>組建 17110
 一般 Windows 組建 17110 的詳細資訊請造訪[Windows 部落格](https://blogs.windows.com/windowsexperience/2018/02/27/announcing-windows-10-insider-preview-build-17110-fast/)。
 
 ### <a name="wsl"></a>WSL
@@ -467,7 +479,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 ### <a name="ltp-results"></a>LTP 結果：
 在進行測試。
 
-## <a name="build-17083"></a>建置 17083
+## <a name="build-17083"></a>組建 17083
 一般 Windows 組建 17083 的詳細資訊請造訪[Windows 部落格](https://blogs.windows.com/windowsexperience/2018/01/24/announcing-windows-10-insider-preview-build-17083-for-pc/)。
 
 ### <a name="wsl"></a>WSL
@@ -761,7 +773,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 失敗總數：229<br/>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/16273)<br/>
 
-## <a name="build-16257"></a>建置 16257
+## <a name="build-16257"></a>組建 16257
 
 一般 Windows 組建 16257 的詳細資訊請造訪[Windows 部落格](https://blogs.windows.com/windowsexperience/2017/08/02/announcing-windows-10-insider-preview-build-16257-pc-build-15237-mobile/)。<br/>
 
@@ -793,7 +805,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 `prlimit64`<br/>
 
 ### <a name="known-issues"></a>已知問題
-#### [<a name="github-issue-2392-windows-folders-not-recognized-by-wsl-"></a>GitHub 問題 2392年:無法辨識的 WSL Windows 資料夾...](https://github.com/Microsoft/BashOnWindows/issues/2392)
+#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[GitHub 問題 2392年:無法辨識的 WSL Windows 資料夾...](https://github.com/Microsoft/BashOnWindows/issues/2392)
 在組建中 16257，WSL 有問題時列舉 Windows 檔案/資料夾透過`/mnt/c/...`。
 已修正此問題，因此應該在發行測試人員組建開始時間 2017 年 8 月 14 日一週內。
 

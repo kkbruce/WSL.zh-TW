@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
 ms.openlocfilehash: 055bdc02dcf8f078caa014abd6dd755a47c99cfe
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063296"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>疑難排解適用於 Linux 的 Windows 子系統
@@ -114,11 +114,11 @@ sudo update-locale LANG=en_US.UTF8
 在某些情況下關閉防火牆可供存取。  在某些情況下單純地安裝防火牆會封鎖其存取權。
 
 ### <a name="permission-denied-error-when-using-ping"></a>使用 ping 時的權限遭拒錯誤
-#### [<a name="anniversary-update"></a>年度更新版](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
+#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14388-to-windows-10-anniversary-update"></a>[年度更新版](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
 
 在 Windows 中的系統管理員權限，才能在 WSL 執行 ping。  若要執行 ping，身為管理員，Windows 上，執行 ubuntu 的 Bash 或 bash.exe 從執行系統管理員權限的 CMD/PowerShell 提示字元。
 
-#### [<a name="build-14926"></a>建置 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
+#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14926"></a>[建置 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
   不再需要系統管理員權限。
 
 ### <a name="bash-is-hung"></a>Bash 已停止
