@@ -1,5 +1,5 @@
 ---
-title: 適用於 Enterprise Linux 的 Windows 子系統
+title: 適用於 Linux for Enterprise 的 Windows 子系統
 description: 資源，以及指示如何充分使用適用於 Linux 的 Windows 子系統在企業環境中。
 keywords: 安裝 BashOnWindows、 bash、 wsl、 windows、 linux、 windowssubsystem、 ubuntu、 debian、 suse、 windows 10、 enterprise、 部署、 離線、 封裝、 存放區、 發佈、 安裝的 windows 子系統
 author: mscraigloewen
@@ -9,13 +9,13 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.openlocfilehash: 9d867654d1b66fc14b58bc5e111986a7d38ef79c
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063276"
 ---
-# <a name="windows-subsystem-for-linux-for-enterprise"></a>適用於 Enterprise Linux 的 Windows 子系統
+# <a name="windows-subsystem-for-linux-for-enterprise"></a>適用於 Linux for Enterprise 的 Windows 子系統
 
 Microsoft Store for Business 到想要為其公司部署 WSL 的企業提供各式各樣的解決方案。 [線上文件](https://docs.microsoft.com/en-us/microsoft-store/)為 Microsoft Store for Business 的 若要了解的市集體驗的一般資訊的絕佳資源。
 

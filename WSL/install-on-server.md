@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
 ms.openlocfilehash: c0b8af08a06428ebd292b8c6b9b275726988bdbe
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063616"
 ---
 # <a name="windows-server-installation-guide"></a>Windows Server 安裝指南
@@ -61,6 +61,6 @@ ms.locfileid: "59063616"
     $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
     [System.Environment]::SetEnvironmentVariable("PATH", $userenv + "C:\Users\Administrator\Ubuntu", "User")
     ```
-    您現在可以啟動您的散發版本，從任何路徑輸入`<distro>.exe`。 例如:  `ubuntu.exe`
+    您現在可以啟動您的散發版本，從任何路徑輸入`<distro>.exe`。 例如：`ubuntu.exe`
 
 既然您的 Linux 散發套件已安裝，您必須[初始化新的散發版本執行個體](initialize-distro.md)才能使用您的散發套件。

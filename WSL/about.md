@@ -8,12 +8,13 @@ ms.date: 07/11/2016
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
-ms.openlocfilehash: a9c8d32f2b87319b45b1b757b4d71c0a4c41292c
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.localizationpriority: High
+ms.openlocfilehash: ad582d1b3a3d4277ee1b9b7adb0dc63a644abce9
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "59063506"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59529062"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Linux 文件的 Windows 子系統
 
@@ -25,7 +26,7 @@ ms.locfileid: "59063506"
 1. 執行一般命令列的免費軟體，例如`grep`， `sed`， `awk`，或其他 ELF-64 二進位檔。 
 1. 執行 Bash 殼層指令碼和 GNU/Linux 命令列應用程式，包括：  
     * 工具： vim、 emacs、 tmux
-    * 語言：Javascript/node.js、 Ruby、 Python、 C/c + +， C# & F#、 Rust、 Go 等等。
+    * 語言：Javascript/node.js、 Ruby、 Python、 C /C++， C# & F#、 Rust、 Go 等等。
     * 服務： sshd，MySQL，Apache，lighttpd
 1. 安裝其他軟體，使用自己的 GNU/Linux 散發套件管理員。
 1. 叫用使用 Unix 型的命令列殼層的 Windows 應用程式。

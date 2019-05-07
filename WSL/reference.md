@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 82908295-a6bd-483c-a995-613674c2677e
 ms.custom: seodec18
 ms.openlocfilehash: 978a35d593e37877949c24cbd833a519888d54bf
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063576"
 ---
 # <a name="command-reference-for-windows-subsystem-for-linux"></a>適用於 Linux 的 Windows 子系統的命令參考

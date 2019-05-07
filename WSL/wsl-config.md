@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7ca59bd7-d9d3-4f6d-8b92-b8faa9bcf250
 ms.custom: seodec18
 ms.openlocfilehash: c806552750f413fcb75f989d868a57cc939af64a
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063496"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>管理和設定適用於 Linux 的 Windows 子系統
@@ -23,7 +23,7 @@ ms.locfileid: "59063496"
 
 有許多方法可執行 Linux 的 Windows 子系統，適用於 Linux。
 
-1. `[distro]` ie `ubuntu`
+1. `[distro]` 亦即 `ubuntu`
 1. `wsl.exe` 或 `bash.exe`
 1. `wsl [command]` 或 `bash -c [command]`
 
@@ -43,7 +43,7 @@ ms.locfileid: "59063496"
 
 從命令列，如此一來執行散發的缺點是，它會自動將變更您的工作目錄從目前的目錄來散發套件的主目錄。
 
-**範例：**
+**範例:**
 
 ```console
 PS C:\Users\sarah> pwd
@@ -66,7 +66,7 @@ PS C:\Users\sarah>
 
 若要從命令列執行 WSL 的最佳方式使用`wsl.exe`。
 
-**範例：**
+**範例:**
 
 ```console
 PS C:\Users\sarah> pwd
@@ -83,7 +83,7 @@ scooley@scooley-elmer:/mnt/c/Users/sarah$ pwd
 
 不但`wsl`就地保留目前的工作目錄，它可讓您執行單一命令，沿著端 Windows 命令。
 
-**範例：**
+**範例:**
 
 ```console
 PS C:\Users\sarah> Get-Date
@@ -100,7 +100,7 @@ PS C:\Users\sarah> wsl date
 Sun Mar 11 19:55:47 DST 2018
 ```
 
-**範例：**
+**範例:**
 
 ```console
 PS C:\Users\sarah> Get-VM
@@ -130,7 +130,7 @@ PS C:\Users\sarah>
 
 #### <a name="list-distributions"></a>清單的散發套件
 
-`wsl -l` 、 `wsl --list`  
+`wsl -l` , `wsl --list`  
 列出可用於 WSL 的 Linux 散發套件。  如果列出的散發，它會安裝，且可供使用。
 
 `wsl --list --all`   
@@ -147,7 +147,7 @@ PS C:\Users\sarah>
 
 若要設定的預設分佈`<DistributionName>`。
 
-**範例：**  
+**範例:**  
 `wsl -s Ubuntu` 會將我的預設發佈設定到 Ubuntu。  現在，當我執行`wsl npm init`會在 Ubuntu 執行。  如果我執行`wsl`即會開啟 Ubuntu 工作階段。
 
 #### <a name="unregister-and-reinstall-a-distribution"></a>取消註冊再重新安裝散發
@@ -213,7 +213,7 @@ Usage:
 
 若要設定的預設分佈`<DistributionName>`。
 
-**範例：**  
+**範例:**  
 `wslconfig /setdefault Ubuntu` 會將我的預設發佈設定到 Ubuntu。  現在，當我執行`wsl npm init`會在 Ubuntu 執行。  如果我執行`wsl`即會開啟 Ubuntu 工作階段。
 
 #### <a name="unregister-and-reinstall-a-distribution"></a>取消註冊再重新安裝散發
@@ -268,10 +268,10 @@ WSL 支援兩個區段：`automount`和`network`。
 區段： `[automount]`
 
 
-| 索引鍵        | value                          | 預設值      | 附註                                                                                                                                                                                                                                                                                                                          |
+| key        | value                          | 預設值      | 附註                                                                                                                                                                                                                                                                                                                          |
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| enabled    | 布林值                        | true         | `true` 固定磁碟機 （也就是原因 `C:/` 或是`D:/`) 會自動使用 DrvFs 下掛接`/mnt`。  `false` 表示將不會自動掛接磁碟機，但仍然無法裝載它們，以手動方式或透過`fstab`。                                                                                                             |
-| mountFsTab | 布林值                        | true         | `true` 設定`/etc/fstab`處理在 WSL 啟動。 /etc/fstab 是您可以在此宣告，請在其他檔案系統，例如 SMB 共用的檔案。 因此，您可以掛接這些檔案系統在 WSL 在啟動時自動註冊。                                                                                                                |
+| enabled    | boolean                        | true         | `true` 固定磁碟機 （也就是原因 `C:/` 或是`D:/`) 會自動使用 DrvFs 下掛接`/mnt`。  `false` 表示將不會自動掛接磁碟機，但仍然無法裝載它們，以手動方式或透過`fstab`。                                                                                                             |
+| mountFsTab | boolean                        | true         | `true` 設定`/etc/fstab`處理在 WSL 啟動。 /etc/fstab 是您可以在此宣告，請在其他檔案系統，例如 SMB 共用的檔案。 因此，您可以掛接這些檔案系統在 WSL 在啟動時自動註冊。                                                                                                                |
 | 根目錄       | 字串                         | `/mnt/`      | 設定其中的固定磁碟機將會自動掛接的目錄。 例如，如果您有一個目錄中在 WSL`/windir/`和您指定，做為根，您會預期會看見您掛接於的固定磁碟機 `/windir/c`                                                                                              |
 | 選項    | 以逗號分隔值清單 | 空字串 | 這個值會附加至預設 DrvFs 掛接選項字串。 **可以指定只有 DrvFs 特有的選項。** 不支援二進位掛接通常會剖析成旗標的選項。 如果您想要明確指定這些選項，您必須包含您要在 /etc/fstab 中這麼做的每個磁碟機。 |
 
@@ -283,10 +283,10 @@ WSL 支援兩個區段：`automount`和`network`。
 
 區段標籤： `[network]`
 
-| 索引鍵 | value | 預設值 | 附註|
+| key | value | 預設值 | 附註|
 |:----|:----|:----|:----|
-| generateHosts | 布林值 | `true` | `true` 設定產生 WSL `/etc/hosts`。 `hosts`檔案包含主機名稱對應的 IP 位址的靜態對應。 |
-| generateResolvConf | 布林值 | `true` | `true` 設定產生 WSL `/etc/resolv.conf`。 `resolv.conf`包含 DNS 清單所能指定的主機名稱解析為其 IP 位址。 | 
+| generateHosts | boolean | `true` | `true` 設定產生 WSL `/etc/hosts`。 `hosts`檔案包含主機名稱對應的 IP 位址的靜態對應。 |
+| generateResolvConf | boolean | `true` | `true` 設定產生 WSL `/etc/resolv.conf`。 `resolv.conf`包含 DNS 清單所能指定的主機名稱解析為其 IP 位址。 | 
 
 #### <a name="interop"></a>Interop
 
@@ -294,7 +294,7 @@ WSL 支援兩個區段：`automount`和`network`。
 
 這些選項是用於測試人員組建 17713 和更新版本。
 
-| 索引鍵 | value | 預設值 | 附註|
+| key | value | 預設值 | 附註|
 |:----|:----|:----|:----|
-| enabled | 布林值 | `true` | 此索引鍵的設定會決定是否支援 WSL 啟動 Windows 處理程序。 |
-| appendWindowsPath | 布林值 | `true` | 此索引鍵的設定會判定 WSL 是否會將 Windows 路徑項目加入至 $PATH 環境變數。 | 
+| enabled | boolean | `true` | 此索引鍵的設定會決定是否支援 WSL 啟動 Windows 處理程序。 |
+| appendWindowsPath | boolean | `true` | 此索引鍵的設定會判定 WSL 是否會將 Windows 路徑項目加入至 $PATH 環境變數。 | 

@@ -8,10 +8,10 @@ ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
 ms.openlocfilehash: 5dcfe0987ecb6615fbe1ab67d178679ac6ad9317
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063246"
 ---
 # <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>Windows 與 Linux 互通性的 Windows 子系統
