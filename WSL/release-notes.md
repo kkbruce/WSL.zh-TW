@@ -1026,7 +1026,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 
 ### <a name="fixed"></a>固定式
 
-- 移除路徑，在結束時，產生死結的修正"."
+- 移除路徑，在結束時，產生死結的修正".."
 - 已修正的問題其中 FIONBIO 未成功 [GH 1683] 傳回 0
 - 已修正的問題 inet 資料包通訊端讀取長度為零
 - 修正 [drvfs inode 查閱 [GH 1675] 中的 [可能的死結，因為競爭條件
@@ -1035,7 +1035,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：737</br>
-非通過的數字 (失敗，所以已略過等等。...):255
+非通過的數字 (失敗，所以已略過等等...):255
 
 </br>
 
@@ -1057,7 +1057,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：737</br>
-非通過的數字 (失敗，所以已略過等等。...):255 </br>
+非通過的數字 (失敗，所以已略過等等...):255 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15031)<br/>
 
 <br/>
@@ -1087,7 +1087,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：732</br>
-非通過的數字 (失敗，所以已略過等等。...):255 </br>
+非通過的數字 (失敗，所以已略過等等...):255 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15025)<br/>
 
 <br/>
@@ -1109,7 +1109,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：714 </br>
-非通過的數字 (失敗，所以已略過等等。...):249 </br>
+非通過的數字 (失敗，所以已略過等等...):249 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15019)<br/>
 
 <br/>
@@ -1133,7 +1133,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：709 </br>
-非通過的數字 (失敗，所以已略過等等。...):255 </br>
+非通過的數字 (失敗，所以已略過等等...):255 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15014)<br/>
 
 ### <a name="syscall-summary"></a>Syscall 摘要
@@ -1165,7 +1165,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：709 </br>
-非通過的數字 (失敗，所以已略過等等。...):255 </br>
+非通過的數字 (失敗，所以已略過等等...):255 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15007)<br/>
 
 <br/>
@@ -1223,7 +1223,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：690 </br>
-非通過的數字 (失敗，所以已略過等等。...):274 </br>
+非通過的數字 (失敗，所以已略過等等...):274 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15002)<br/>
 
 <br/>
@@ -1258,7 +1258,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：669 </br>
-非通過的數字 (失敗，所以已略過等等。...):258 </br>
+非通過的數字 (失敗，所以已略過等等...):258 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14986)<br/>
 
 <br/>
@@ -1284,7 +1284,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 ### <a name="ltp-results"></a>LTP 結果：
 從 14965 以來並未變更 </br>
 通過測試數目：664 </br>
-非通過的數字 (失敗，所以已略過等等。...):263 </br>
+非通過的數字 (失敗，所以已略過等等...):263 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
 
 <br/>
@@ -1322,7 +1322,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：664 </br>
-非通過的數字 (失敗，所以已略過等等。...):263 </br>
+非通過的數字 (失敗，所以已略過等等...):263 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
 
 <br/>
@@ -1341,7 +1341,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：665 </br>
-非通過的數字 (失敗，所以已略過等等。...):263 </br>
+非通過的數字 (失敗，所以已略過等等...):263 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14959)<br/>
 
 <br/>
@@ -1357,7 +1357,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：665 </br>
-非通過的數字 (失敗，所以已略過等等。...):263 </br>
+非通過的數字 (失敗，所以已略過等等...):263 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14955)<br/>
 
 <br/>
@@ -1394,7 +1394,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：665 </br>
-非通過的數字 (失敗，所以已略過等等。...):263 </br>
+非通過的數字 (失敗，所以已略過等等...):263 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14951)<br/>
 
 <br/>
@@ -1419,7 +1419,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：665 </br>
-非通過的數字 (失敗，所以已略過等等。...):263 </br>
+非通過的數字 (失敗，所以已略過等等...):263 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14946)<br/>
 
 <br/>
@@ -1441,7 +1441,7 @@ WSL 與 Windows 應用程式現在可以透過 Unix 通訊端通訊彼此。 假
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：665 </br>
-非通過的數字 (失敗，所以已略過等等。...):263 </br>
+非通過的數字 (失敗，所以已略過等等...):263 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14942)<br/>
 
 ### <a name="syscall-support"></a>Syscall 支援
@@ -1477,7 +1477,7 @@ WSL 發生某些通訊端實作的問題。  檢查錯誤會造成系統呈現�
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：664 </br>
-非通過的數字 (失敗，所以已略過等等。...):264 </br>
+非通過的數字 (失敗，所以已略過等等...):264 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14936)<br/>
 
 ### <a name="syscall-support"></a>Syscall 支援
@@ -1517,7 +1517,7 @@ WSL 發生某些通訊端實作的問題。  檢查錯誤會造成系統呈現�
 
 ### <a name="ltp-results"></a>LTP 結果：
 通過測試數目：651 </br>
-非通過的數字 (失敗，所以已略過等等。...):258 </br>
+非通過的數字 (失敗，所以已略過等等...):258 </br>
 [LTP 測試回合記錄檔](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14926)<br/>
 
 <br/>
@@ -1702,7 +1702,7 @@ WSL 發生某些通訊端實作的問題。  檢查錯誤會造成系統呈現�
 - 非英文字元的改進的支援
 - 加入目前的 Windows 時區資料，並設定為預設值
 - 唯一裝置識別碼的每個掛接點 （jre 修復 – GH #49）
-- 包含路徑與修正問題 」。 」 和"."
+- 包含路徑與修正問題 」。 」 和".."
 - 已新增的 Fifo 支援 (GH #71)
 - 更新的 resolv.conf 來比對原生的 Ubuntu 格式的格式
 - 某些 procfs 的清除工作
@@ -1746,7 +1746,7 @@ WSL 發生某些通訊端實作的問題。  檢查錯誤會造成系統呈現�
 - 其他錯誤修正和增強功能
 
 ### <a name="known-issues"></a>已知問題
-- 無法解析 '.' 在某些情況下 DriveFs 上的正確
+- 無法解析 '..' 在某些情況下 DriveFs 上的正確
 
 ### <a name="syscall-support"></a>Syscall 支援
 以下是某些實作在 WSL 的全新或加強 syscall 的清單。 在這份清單 syscall 支援在至少一個案例中，但可能不具有所有參數都支援這一次。
