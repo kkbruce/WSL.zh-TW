@@ -8,12 +8,12 @@ ms.date: 05/22/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: c0b8af08a06428ebd292b8c6b9b275726988bdbe
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 25723395212575f8fe2dcbfbd30b59de9431816a
+ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063616"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67035069"
 ---
 # <a name="windows-server-installation-guide"></a>Windows Server 安裝指南
 
@@ -59,7 +59,7 @@ ms.locfileid: "59063616"
         
     ```powershell
     $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
-    [System.Environment]::SetEnvironmentVariable("PATH", $userenv + "C:\Users\Administrator\Ubuntu", "User")
+    [System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Users\Administrator\Ubuntu", "User")
     ```
     您現在可以啟動您的散發版本，從任何路徑輸入`<distro>.exe`。 例如：`ubuntu.exe`
 

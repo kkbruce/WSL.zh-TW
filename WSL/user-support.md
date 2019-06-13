@@ -8,12 +8,12 @@ ms.date: 09/11/2017
 ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
-ms.openlocfilehash: 5820d701d5c0e22f14bf76e3dc6fe70bacb5213a
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 0d00b43d059e72edd4e2a5b9591c29441f461fca
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063596"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040830"
 ---
 # <a name="user-accounts-and-permissions-for-windows-subsystem-for-linux"></a>使用者帳戶和適用於 Linux 的 Windows 子系統的權限
 
@@ -128,11 +128,11 @@ Usage:
 * 一般 （非提高權限）：Linux 執行的登入的使用者權限
 * 提高權限/系統管理：以提高權限/系統管理員的 Windows 權限執行的 Linux
 
-> 因為，提高權限處理程序可以變更/損毀的全系統設定和資料，和可存取/修改受保護的檔案和資料夾，**避免**啟動提高程序，除非絕對需要的時候-不論它們是 Windows 或Linux 應用程式/tools/殼層 ！
+> 提高權限的程序可以存取/修改 （且因此損害） 全系統設定和系統寬/受保護的資料，因為**避免**啟動提升權限的處理序，除非絕對需要的時候-它們是 Windows 或 Linux應用程式/tools/殼層 ！
 
 上述的 Windows 權限是獨立的中的 Linux 執行個體的權限：Linux 「 根權限 」 只會影響使用者的權限中的 Linux 環境與檔案系統;它們會將不會影響對授與 Windows 權限。 因此，以 root 身分執行 Linux 處理序 (例如，透過`sudo`) 只會處理在 Linux 環境中的系統管理員權限授與。
 
-**範例：**    
+**範例：**     
 Windows 系統管理員權限的 Bash 工作階段可以存取`cd /mnt/c/Users/Administrator`沒有系統管理員權限就會看到 「 拒絕的權限 」 的錯誤時的 Bash 工作階段。
 
 在 Linux 中，輸入`sudo cd /mnt/c/Users/Administrator`由於 Windows 內的權限由 Windows，將會授與系統管理員的目錄的存取權。

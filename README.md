@@ -19,3 +19,6 @@
 如需詳細資訊，請參閱[程式碼的管理辦法常見問題集](https://opensource.microsoft.com/codeofconduct/faq/)，或連絡[ opencode@microsoft.com ](mailto:opencode@microsoft.com)有任何其他問題或意見。
 
 歡迎使用 Microsoft 的命令列殼層的 markdown 來源及主控台文件。
+
+## <a name="license"></a>使用權
+散布 Creative Commons Attribution 4.0 International (由 4.0 CC) 的公用授權。

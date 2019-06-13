@@ -8,12 +8,12 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: b31bb3a542b8481c723df42292e20e364680722d
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: fbb5bdc401a013b0853774cff6ad2dc84a36e412
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063586"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040833"
 ---
 # <a name="guide-to-install-or-uninstall-windows-subsystem-for-linux-on-windows-10-anniversary-update-and-creators-update"></a>若要安裝或解除安裝適用於 Windows 10 年度更新版和 Creators Update 上 Linux 的 Windows 子系統的指南 
 
@@ -38,7 +38,7 @@ ms.locfileid: "59063586"
 
 1. 開啟命令提示字元。  型別`bash`然後按 enter 鍵
 
-    您第一次在 Ubuntu 執行 Bash Windows，系統會提示您接受 Canonical 的授權。 一旦 accpted，WSL 會下載並安裝到您的電腦上的 Ubuntu 執行個體，"Bash 在 Ubuntu 上 Windows 「 快顯會新增至 [開始] 功能表。
+    您第一次在 Ubuntu 執行 Bash Windows，系統會提示您接受 Canonical 的授權。 一旦接受，WSL 會下載並安裝到您的電腦上的 Ubuntu 執行個體，"Bash 在 Ubuntu 上 Windows 「 快顯會新增至 [開始] 功能表。
 
     ![若要安裝 Ubuntu 的提示字元](media/bashShellInstall.png)
 

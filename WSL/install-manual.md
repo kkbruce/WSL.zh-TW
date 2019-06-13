@@ -8,12 +8,12 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: be1c1331183317d4f970696464110b9968208d21
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 669c017c97aba70c107484b32acd99296265d84a
+ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063566"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67035031"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>手動下載 Linux 散發套件的 Windows 子系統
 
@@ -21,7 +21,7 @@ ms.locfileid: "59063566"
 
 在這些情況下，而本身的 WSL 可用，如何下載及安裝 WSL 中的 Linux 散發版本，如果您無法存取存放區嗎？
 
-> 注意：**命令列殼層的環境，包括 Cmd、 PowerShell 和 Linux/WSL 散發版本不允許執行 Windows 10 S 模式**。 這項限制是為了確保 S 模式提供的完整性和安全性目標：讀取[這篇文章](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/)如需詳細資訊。
+> 注意:**命令列殼層的環境，包括 Cmd、 PowerShell 和 Linux/WSL 散發版本不允許執行 Windows 10 S 模式**。 這項限制是為了確保 S 模式提供的完整性和安全性目標：讀取[這篇文章](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/)如需詳細資訊。
 
 ## <a name="downloading-distros"></a>下載散發版本
 
@@ -31,8 +31,9 @@ ms.locfileid: "59063566"
 * [Ubuntu 16.04](https://aka.ms/wsl-ubuntu-1604)
 * [Debian GNU/Linux](https://aka.ms/wsl-debian-gnulinux)
 * [Kali Linux](https://aka.ms/wsl-kali-linux)
-* [OpenSUSE](https://aka.ms/wsl-opensuse-42)
-* [SLES](https://aka.ms/wsl-sles-12)
+* [OpenSUSE Leap 42](https://aka.ms/wsl-opensuse-42)
+* [SUSE Linux Enterprise Server 12](https://aka.ms/wsl-sles-12)
+* [Fedora Remix 的 WSL](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
 
 這會導致`<distro>.appx`套件下載至您所選擇的資料夾。 請遵循[安裝指示](#installing-your-distro)安裝您已下載的 distro(s)。
 
@@ -58,7 +59,7 @@ curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 
 在上述範例中，`curl.exe`執行 (不是只`curl`) 來確保，在 PowerShell 中，實際的 curl 可執行檔是叫用，不別名的 PowerShell curl [Invoke-webrequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)
 
-> 注意：使用`curl`可能比較適合，如果您必須叫用/指令碼下載使用 Cmd shell 中的步驟和 （或) `.bat`  /  `.cmd`指令碼。
+> 注意:使用`curl`可能比較適合，如果您必須叫用/指令碼下載使用 Cmd shell 中的步驟和 （或) `.bat`  /  `.cmd`指令碼。
 
 ## <a name="installing-your-distro"></a>安裝您的散發套件
 如需有關如何安裝您已下載的 distro(s) 的指示，請參閱[Windows 桌面](install-win10.md)或是[Windows Server](install-on-server.md)安裝指示。

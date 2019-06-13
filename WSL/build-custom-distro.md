@@ -8,12 +8,12 @@ ms.date: 03/27/2018
 ms.topic: article
 ms.assetid: a5095219-0c82-4ce5-9a6d-5c2fc00835a3
 ms.custom: seodec18
-ms.openlocfilehash: b98101c19d7d450548531521c3f8ee15ce62f9f1
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 4072df5fa81f65fd9a3ff875ab887c03b234bce1
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063256"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040781"
 ---
 # <a name="creating-a-custom-linux-distro-for-wsl"></a>建立自訂的 Linux Distro WSL
 
@@ -24,7 +24,7 @@ ms.locfileid: "59063256"
 * 開發人員建立自訂的 Linux 散發套件可以側載至其開發電腦
 
 ## <a name="background"></a>背景
-我們將散發的 Linux 散發版本 WSL 為 UWP 應用程式可以透過 Microsoft Store。 您可以安裝在 WSL-在 Windows 核心中的子系統便會執行這些應用程式。 這個傳遞機制有許多優點，先前的部落格文章中所述。
+我們將散發的 Linux 散發版本 WSL 為 UWP 應用程式可以透過 Microsoft Store。 您可以安裝在 WSL-在 Windows 核心中的子系統便會執行這些應用程式。 這個傳遞機制中所述，有許多優點[較早的部落格文章](https://blogs.msdn.microsoft.com/commandline/2017/07/10/ubuntu-now-available-from-the-windows-store/)。
 
 ## <a name="sideloading-a-custom-linux-distro-package"></a>側載自訂的 Linux 散發套件
 在您的個人電腦上，您可以為要側載應用程式建立自訂的 Linux 散發套件。 請注意，自訂套件將無法散發透過 Microsoft Store 除非您為發佈維護程式送出。
@@ -42,6 +42,6 @@ ms.locfileid: "59063256"
 * [命令列的部落格](https://blogs.msdn.microsoft.com/commandline/)
 
 ## <a name="provide-feedback"></a>提供意見反應
-* [散發套件在啟動器 Github 存放庫](https://github.com/Microsoft/WSL-DistroLauncher)
+* [Distro 啟動器 GitHub 存放庫](https://github.com/Microsoft/WSL-DistroLauncher)
 * [WSL 的 GitHub 問題追蹤器](https://github.com/Microsoft/BashOnWindows/issues)
 * [命令列的 UserVoice 入口網站](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/category/161892-bash)

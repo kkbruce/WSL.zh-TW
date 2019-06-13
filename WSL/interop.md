@@ -7,12 +7,12 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
-ms.openlocfilehash: 5dcfe0987ecb6615fbe1ab67d178679ac6ad9317
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: e4608c25c6bcc63413d53b2c808c16fe2a62dd5c
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063246"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040813"
 ---
 # <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>Windows 與 Linux 互通性的 Windows 子系統
 
@@ -37,7 +37,7 @@ Windows for Linux 子系統 (WSL) 不斷致力改善 Windows 與 Linux 之間的
 1. WSL 預設使用者身分執行。
 1. 具有做為呼叫處理序和終端機相同的 Windows 系統管理權限。
 
-例如: 
+例如:
 
 ```console
 C:\temp> wsl ls -la
@@ -198,7 +198,7 @@ $ echo 1 > /proc/sys/fs/binfmt_misc/WSLInterop
 
 ## <a name="creators-update-and-anniversary-update"></a>Creators Update 」 和 「 年度更新版
 
-雖然 interop 體驗前 Fall Creators Update 也是較新的 interop 體驗類似，但在 handfull 的主要差異。
+雖然 interop 體驗前 Fall Creators Update 也是較新的 interop 體驗類似，但有少數幾個主要的差異。
 
 總結：
 

@@ -9,12 +9,12 @@ ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
 ms.localizationpriority: High
-ms.openlocfilehash: ad582d1b3a3d4277ee1b9b7adb0dc63a644abce9
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: f2df3c06d6c56aa8bc5a41ea9f075635b70c8685
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59529062"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040811"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Linux 文件的 Windows 子系統
 
@@ -32,9 +32,9 @@ ms.locfileid: "59529062"
 1. 叫用使用 Unix 型的命令列殼層的 Windows 應用程式。
 1. 叫用 Windows 上的 GNU/Linux 應用程式。
 
-## <a name="getting-started"></a>使用者入門
+## <a name="getting-started"></a>開始使用
 
-* [在 Windows 上安裝 Linux](install_guide.md)
+* [Windows 10 上安裝 Linux](install-win10.md)
 * [請瀏覽命令參考](reference.md)
 * [閱讀常見問題集](faq.md)
 
