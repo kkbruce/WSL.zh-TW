@@ -8,12 +8,12 @@ ms.date: 11/15/2017
 ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
-ms.openlocfilehash: 055bdc02dcf8f078caa014abd6dd755a47c99cfe
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: feb9e25da73eeb0d7f0cef4014221a42e2ca179b
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063296"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040851"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>疑難排解適用於 Linux 的 Windows 子系統
 
@@ -28,7 +28,7 @@ ms.locfileid: "59063296"
 5. 開啟`/etc/resolv.conf`和 <br/>
    a. 刪除的第一行，從檔案，指出 「\#這個檔案自動產生的 WSL。 若要停止自動產生這個檔案，移除這行文字。 」。 <br/>
    b. 新增 DNS 項目 (1) 從上方為 DNS 伺服器清單中的第一個項目。 <br/>
-   c.  關閉檔案。 <br/>
+   c. 關閉檔案。 <br/>
 
 一旦您已經中斷連線 VPN，您就必須還原所做的變更`/etc/resolv.conf`。 若要這樣做，請執行：
 1. `cd /etc`
@@ -86,7 +86,7 @@ ms.locfileid: "59063296"
 1. 按一下 [確定]
 
 ### <a name="error-0x80040154-after-windows-update"></a>"Error:0x80040154 」 Windows 更新之後
-針對 Linux 功能的 Windows 子系統可能會停用在 Windows 的更新。 如果發生這種情況則必須重新啟用 Windows 功能。 啟用 Windows 子系統中，可以找到 Linux 的指示[安裝指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
+針對 Linux 功能的 Windows 子系統可能會停用在 Windows 的更新。 如果發生這種情況則必須重新啟用 Windows 功能。 啟用 Windows 子系統中，可以找到 Linux 的指示[安裝指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
 
 ### <a name="changing-the-display-language"></a>變更顯示語言
 WSL 安裝將會嘗試自動變更以符合您的 Windows 安裝的地區設定的 Ubuntu 地區設定。  如果不想讓此行為，您可以執行這個命令來安裝完成之後，變更 Ubuntu 地區設定。  您必須重新啟動 bash.exe 這項變更才會生效。
@@ -149,7 +149,6 @@ systeminfo | Select-String "^OS Name","^OS Version"
 ### <a name="confirm-wsl-is-enabled"></a>確認已啟用 WSL
 您可以確認適用於 Linux 的 Windows 子系統，會啟用在 PowerShell 中執行下列命令：  
 ``` PowerShell
-PowerShell
 Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
@@ -165,7 +164,22 @@ Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linu
    sudo service ssh stop
    sudo /usr/sbin/sshd -d
    ```
-3. 檢查啟動記錄檔，並確定 HostKeys 可用，且您沒有看到記錄檔訊息，例如： debug1: sshd 版本 OpenSSH_7.2，OpenSSL 1.0.2g 1 Mar 2016 debug1: key_load_private： 不正確的複雜密碼提供給解密私用金鑰 debug1: key_load_public:沒有這類檔案或目錄無法載入主機金鑰： /etc/ssh/ssh_host_rsa_key debug1: key_load_private:沒有這類檔案或目錄 debug1: key_load_public:沒有這類檔案或目錄無法載入主機金鑰： /etc/ssh/ssh_host_dsa_key debug1: key_load_private:沒有這類檔案或目錄 debug1: key_load_public:沒有這類檔案或目錄無法載入主機金鑰： /etc/ssh/ssh_host_ecdsa_key debug1: key_load_private:沒有這類檔案或目錄 debug1: key_load_public:沒有這類檔案或目錄無法載入主機金鑰： /etc/ssh/ssh_host_ed25519_key
+3. 檢查啟動記錄檔，並確定 HostKeys 可用，而且您沒有看到記錄檔訊息，例如：
+   ```
+   debug1: sshd version OpenSSH_7.2, OpenSSL 1.0.2g  1 Mar 2016
+   debug1: key_load_private: incorrect passphrase supplied to decrypt private key
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_rsa_key
+   debug1: key_load_private: No such file or directory
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_dsa_key
+   debug1: key_load_private: No such file or directory
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_ecdsa_key
+   debug1: key_load_private: No such file or directory
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_ed25519_key
+   ```
 
 如果您看到這類訊息，而且索引鍵為下方遺漏`/etc/ssh/`，您必須重新產生金鑰，或只是清除並安裝 openssh 伺服器：
 ```BASH

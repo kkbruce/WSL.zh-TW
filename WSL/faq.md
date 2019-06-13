@@ -7,12 +7,12 @@ ms.author: taraj
 ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
-ms.openlocfilehash: 80675d8452b626ebe1d235774167c5ff27e4b44d
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 07461f7db4a351f5b79ab0c5179d3d917ef1bdf7
+ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063266"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67035066"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>適用於 Linux 常見問題集 Windows 子系統相關的問題
 
@@ -82,7 +82,7 @@ WSL 的好處之一能夠存取您的檔案，透過 Windows 和 Linux 應用程
 
 WSL 掛接您的電腦下的固定磁碟機`/mnt/<drive>`在您的 Linux 散發版本的資料夾。 例如，您`C:`下有掛接的磁碟機 `/mnt/c/` 
 
-使用您已掛接的磁碟機，您可以編輯程式碼中，例如`C:\dev\myproj\`使用[Visual Studio](https://visualstudio.microsoft.com/vs/) / 或[VS Code](https://code.visualstudio.com/)，以及建置/測試 Linux 中的程式碼存取相同的檔案，透過`\mnt\c\dev\myproj`。
+使用您已掛接的磁碟機，您可以編輯程式碼中，例如`C:\dev\myproj\`使用[Visual Studio](https://visualstudio.microsoft.com/vs/) / 或[VS Code](https://code.visualstudio.com/)，以及建置/測試 Linux 中的程式碼存取相同的檔案，透過`/mnt/c/dev/myproj`。
 
 > **重要事項**:其中一個使用 WSL 的主要限制是，不支援直接存取/變更您的 Linux 散發版本的檔案系統使用 Windows 應用程式或工具中的檔案。 請參閱：[不會變更使用 Windows 應用程式和工具的 Linux 檔案](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
 
@@ -146,7 +146,7 @@ WSL 不支援在舊版的主控台中執行。 若要關閉舊版主控台：
 1. 按一下 [確定]
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>為什麼我會收到 「 錯誤：0x80040154 「 當我升級 Windows 之後，會在執行 bash.exe 時？
-[Windows Linux 子系統] 功能可能會停用在 Windows 的更新。 如果發生這種情況則必須重新啟用 Windows 功能。 啟用 「 Windows Linux 子系統 」 功能的指示可在[安裝指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
+[Windows Linux 子系統] 功能可能會停用在 Windows 的更新。 如果發生這種情況則必須重新啟用 Windows 功能。 啟用 「 Windows Linux 子系統 」 功能的指示可在[安裝指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>如何變更顯示語言的 WSL？
 WSL 安裝將會嘗試自動變更以符合您的 Windows 安裝的地區設定的 Ubuntu 地區設定。 如果不想讓此行為，您可以執行這個命令來安裝完成之後，變更 Ubuntu 地區設定。 您必須重新啟動 bash.exe 這項變更才會生效。
