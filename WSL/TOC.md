@@ -8,5 +8,11 @@
 # [互通性](./interop.md)
 # [建置自訂 Distro](./build-custom-distro.md)
 # [常見問題集](./faq.md)
+# [WSL 2](./wsl2-index.md)
+## [關於 WSL 2](./wsl2-about.md)
+## [安裝 WSL 2](./wsl2-install.md)
+## [使用者體驗從 WSL 1 變更為 WSL 2](./wsl2-ux-changes.md)
+## [常見問題集](./wsl2-faq.md)
+
 # [疑難排解](./troubleshooting.md)
 # [版本資訊](./release-notes.md)
