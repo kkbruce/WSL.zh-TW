@@ -1,54 +1,66 @@
 ---
 title: 安裝 WSL 2
 description: WSL 2 的安裝指示
-keywords: 安裝 BashOnWindows、 bash、 wsl、 wsl2、 windows、 linux、 windowssubsystem、 ubuntu、 debian、 suse、 windows 10 的 windows 子系統
+keywords: BashOnWindows, bash, wsl, wsl2, windows, windows subsystem for linux, windowssubsystem, ubuntu, debian, suse, windows 10, 安裝
 author: mscraigloewen
 ms.author: mscraigloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 2af43a046333fc8c7b4142cdc5077cdfbf29fea7
-ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
-ms.translationtype: MT
+ms.openlocfilehash: 3ad180ecc9deaa1566e9870700b26f82f631c7f1
+ms.sourcegitcommit: 9ad7a54668f39677e9660186e4f5172ea2597e2b
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67038078"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246872"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2 的安裝指示
 
-安裝和開始使用 WSL 2 會完成下列步驟：
+若要安裝並開始使用 WSL 2，請完成下列步驟：
 
-- 啟用 '虛擬機器平台' 選用元件
-- 設定受到 WSL 2 使用命令列的散發套件
-- 確認要使用的 WSL 您的散發套件的版本
+- 啟用「虛擬機器平臺」選用元件
+- 使用命令列設定 WSL 2 支援的分散式版
+- 驗證分散式版本使用的 WSL 版本
 
-## <a name="enable-the-virtual-machine-platform-optional-component"></a>啟用 '虛擬機器平台' 選用元件
+請注意，您必須執行 Windows 10 組建 18917 或更新版本才能使用 WSL 2，而且必須已安裝 WSL (您可以在[這裡](./install-win10.md)找到相關指示)。 
 
-系統管理員身分開啟 PowerShell 並執行：
+## <a name="enable-the-virtual-machine-platform-optional-component"></a>啟用「虛擬機器平臺」選用元件
+
+以系統管理員身分開啟 PowerShell 並執行：
 
 `Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform`
 
-啟用這些變更之後，您必須重新啟動電腦。
+啟用這些變更之後，電腦需要重新開機。
 
-## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a>設定受到 WSL 2 使用命令列的散發套件
+## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a>使用命令列設定 WSL 2 支援的分散式版
 
 在 PowerShell 中執行：
 
 `wsl --set-version <Distro> 2`
 
-並請務必取代`<Distro>`與您的散發套件的實際名稱。 (您可以找到這些命令： `wsl -l`)。 您可以變更回 WSL 1 隨時執行與上述的相同命令，但取代 '2' 與' 1'。
+而且，請務必將 `<Distro>` 取代為分散式版本實際名稱。 (您可以使用命令 `wsl -l` 來找到這些內容)。 您可以執行與上述相同的命令，隨時變更回 WSL 1，但將「2」取代為「1」。
 
-此外，如果您想要讓 WSL 2 預設架構則可以使用下列命令：
+此外，如果您要讓 WSL 2 成為您的預設架構，則可以使用以下命令來執行此動作：
 
 `wsl --set-default-version 2`
 
-這會讓任何新安裝的散發套件會初始化為 WSL 2 發行版本。
+這會讓您安裝的任何全新分散式版本都初始化為 WSL 2 分散式版本。
 
-## <a name="finish-with-verifying-what-versions-of-wsl-your-distro-are-using"></a>完成，並確認 WSL 您的散發套件的版本會使用
+## <a name="finish-with-verifying-what-versions-of-wsl-your-distro-are-using"></a>完成驗證分散式版本所使用的 WSL 版本
 
-若要確認哪些版本的 WSL 使用每個散發套件會使用下列命令：
+若要確認每個分散式版本使用哪個版本的 WSL，請使用下列命令：
 
 `wsl --list --verbose` 或 `wsl -l -v`
 
-您已選擇上述的散發版本現在應該會顯示 '2' 的 'version' 資料行底下。 現在，您已完成放心地開始使用您的 WSL 2 發行版本 ！ 
+您於上述所選擇的分散式版本現在應該在 [版本] 欄位下顯示「2」。 現在您已完成作業，可以隨時開始使用 WSL 2 分散式版本！ 
+
+## <a name="troubleshooting"></a>疑難排解： 
+
+以下是安裝 WSL 2 時的相關錯誤和建議修正。 有關其他一般 WSL 錯誤和其解決方案的 [WSL 疑難排解頁面](troubleshooting.md)。
+
+* **安裝失敗，發生錯誤 0x80070003 或錯誤0x80370102**
+    * 請確定已在電腦的 BIOS 內啟用虛擬化。 有關如何執行此操作的指示會因電腦而異，並且很可能與 CPU 相關。
+   
+* **嘗試升級時發生錯誤`Invalid command line option: wsl --set-version Ubuntu 2`**
+    * 請確定已啟用適用於 Linux 的 Windows 子系統，且使用的是 Windows 組建 18917 或更高版本。 若要啟用 WSL，請在具有系統管理員權限的 Powershell 提示中執行此命令：`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`。 您可以在[這裡](./install-win10.md)尋找完整的 WSL 安裝指示。
