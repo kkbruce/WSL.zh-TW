@@ -1,6 +1,6 @@
-請注意，此存放庫問題追蹤程式只用於報告問題與 WSL 文件。
+請注意, 此存放庫的問題追蹤程式僅適用于報告 WSL 檔的問題。
 
-其他相關的問題存放庫的：
+其他相關問題存放庫:
 
-* WSL: https://github.com/Microsoft/BashOnWindows/
-* Windows 主控台： https://github.com/Microsoft/Console/
+* WSL https://github.com/Microsoft/BashOnWindows/
+* Windows 主控台: https://github.com/Microsoft/Console/

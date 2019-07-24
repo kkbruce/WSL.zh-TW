@@ -1,79 +1,91 @@
 ---
-title: UX WSL 1 」 與 「 WSL 2 之間的變更
-description: WSL 1 和 WSL 2 之間的使用者體驗變更
-keywords: BashOnWindows、 bash、 wsl、 wsl2、 windows、 linux、 windowssubsystem、 ubuntu、 debian、 suse、 windows 10 的 windows 子系統
+title: WSL 1 和 WSL 2 之間的 UX 變更
+description: WSL 1 與 WSL 2 之間的使用者體驗變更
+keywords: BashOnWindows, bash, wsl, wsl2, windows, 適用于 linux 的 windows 子系統, windowssubsystem, ubuntu, debian, suse, windows 10
 author: mscraigloewen
 ms.author: mscraigloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 0660f9f726811008685de9f1ff457e7515add67a
-ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
+ms.openlocfilehash: a6c8f4fbbf21b4295e69fe3de2ecf0922ab20bbe
+ms.sourcegitcommit: 6086126c35a5518a7110935fa13592b5ed9dd6b7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67038098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67891780"
 ---
-# <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1 和 WSL 2 之間的使用者體驗變更
+# <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1 與 WSL 2 之間的使用者體驗變更
 
-此頁面會透過使用者體驗和之間的差異 WSL 1 WSL 2 預覽。 要注意的主要變更是：
+此頁面會超越 WSL 1 與 WSL 2 preview 之間的使用者體驗差異。 要注意的關鍵變更如下:
 
-- 放置您的 Linux 應用程式會存取 Linux 根檔案系統的效能速度檔案中的檔案
-- 在 WSL 2 預覽的初始組建中，您將需要存取網路應用程式使用的 IP 位址與不使用 localhost
+- 將您的 Linux 應用程式將在 Linux 根檔案系統中存取的檔案放在一起, 以加快檔案效能速度
+- 在 WSL 2 preview 的初始組建中, 您將需要使用 IP 位址存取網路應用程式, 而不使用 localhost
 
-而以下是您可能會發現其他變更的完整清單：
+以下是您可能會注意到的其他變更的完整清單:
 
-- WSL 2 使用 VHD 來儲存您的檔案，而且如果您達到其大小上限您可能需要將它展開
-- 啟動時，WSL 2 現在會使用記憶體的一小部分
-- 跨 OS 檔案存取速度將會在初始的預覽版組建變慢
+- WSL 2 使用[虛擬硬體磁片](https://en.wikipedia.org/wiki/VHD_(file_format))(VHD) 來儲存您的檔案, 如果您達到其大小上限, 您可能需要將它展開
+- 啟動時, WSL 2 現在會使用一小部分的記憶體
+- 初次預覽組建中的跨 OS 檔案存取速度會變慢
 
-## <a name="place-your-linux-files-in-your-linux-root-file-system"></a>將您的 Linux 檔案放在您的 Linux 根檔案系統
-請務必將您的 Linux 將經常存取的檔案放在您的 Linux 內的應用程式根目錄檔案系統，才能享有檔案效能優勢。 這些檔案一定要在 Linux 根檔案系統，以更快速的檔案系統存取。 我們也已可將 Windows 應用程式存取 Linux 根檔案系統 （例如檔案總管 中 ！ 請嘗試執行：`explorer.exe /`中您 bash 殼層並查看) 這麼做會讓這項轉換更加方便。 
+## <a name="place-your-linux-files-in-your-linux-root-file-system"></a>將您的 Linux 檔案放在 Linux 根檔案系統中
+請務必將您將經常存取的檔案, 放在 Linux 根檔案系統內的 Linux 應用程式, 以享有檔案效能優勢。 這些檔案必須位於 Linux 根檔案系統內, 才能加快檔案系統存取的速度。 我們也可以讓 Windows 應用程式存取 Linux 根檔案系統 (例如 File Explorer! 請嘗試執行`explorer.exe .` : 在 Linux 散發版本的主目錄中, 並查看發生什麼事), 這將會大幅簡化此轉換。 
 
-## <a name="accessing-network-applications"></a>存取網路的應用程式
-在 WSL 2 預覽的初始組建，您必須從 Windows 使用您的 Linux 散發版本，並從 Linux 使用主機電腦的 IP 位址的任何 Windows 伺服器的 IP 位址存取的任何 Linux 伺服器。 這是暫時性的且若要修正我們的優先順序清單上非常高的項目。
+## <a name="accessing-network-applications"></a>存取網路應用程式
+在 WSL 2 preview 的初始組建中, 您必須使用您的 Linux 散發版本的 IP 位址, 以及使用您主機電腦 IP 位址的 Linux 中的任何 Windows 伺服器, 從 Windows 存取任何 Linux 伺服器。 這是暫時性的專案, 而且在我們的優先順序清單上會非常高, 以修正此問題。
 
 ### <a name="accessing-linux-applications-from-windows"></a>從 Windows 存取 Linux 應用程式
-如果您有伺服器在 WSL 散發版本，表示您要尋找加強您的散發版本的虛擬機器的 IP 位址，並使用該 IP 位址連線到它。 您可以依照下列步驟來這麼做：
+如果您在 WSL 散發版本中有一部伺服器, 您將需要尋找虛擬機器的 IP 位址, 並使用該 IP 位址來連線到您的散發版本。 您可以遵循下列步驟來執行此動作:
 
-- 執行命令來取得您的散發版本的 IP 位址`ip addr`內 WSL distro 並尋找下加以`inet`的值`eth0`介面。
-   - 您可以找到此更輕鬆地篩選使用 grep 命令的輸出如下： `ip addr | grep eth0`。
-- 連接到您在上面找到您 Linux 伺服器使用的 IP。
+- 在您的 WSL 散發版本內執行命令`ip addr` , 並在`eth0`介面的`inet`值底下尋找, 以取得散發版本的 IP 位址。
+   - 使用 grep 篩選命令的輸出 (如下所示), 可以更輕鬆地找到此`ip addr | grep eth0`程式:。
+- 使用您在上面找到的 IP 連接到 Linux 伺服器。
 
-下圖顯示這個範例藉由連接到使用 microsoft Edge 瀏覽器的 nodeJS 伺服器。
+下圖顯示使用 Edge 瀏覽器連接到 node.js 伺服器的範例。
 
-![從 Windows 存取 Linux 的網路應用程式](media/wsl2-network-w2l.jpg)
+![從 Windows 存取 Linux 網路應用程式](media/wsl2-network-w2l.jpg)
 
 ### <a name="accessing-windows-applications-from-linux"></a>從 Linux 存取 Windows 應用程式
-若要存取 Windows 網路應用程式，您必須使用主機電腦的 IP 位址。 您可以執行下列步驟：
+若要存取 Windows 網路應用程式, 您必須使用主機電腦的 IP 位址。 您可以使用下列步驟來執行此動作:
 
-- 執行命令來取得您的主機電腦的 IP 位址`cat /etc/resolv.conf`並複製下列詞彙的 IP 位址`nameserver`。 
-- 連線至任何使用複製的 IP 位址的 Windows 伺服器。
+- 執行命令`cat /etc/resolv.conf`並複製該字詞`nameserver`之後的 ip 位址, 以取得主機電腦的 ip 位址。 
+- 使用複製的 IP 位址連接到任何 Windows 伺服器。
 
-下圖顯示這個範例藉由連線到透過 curl 在 Windows 中執行的 python 伺服器。 
+下圖顯示這種情況的範例, 其方式是連接到在 Windows 中執行的 node.js 伺服器 (透過捲曲)。 
 
-![從 Windows 存取 Linux 的網路應用程式](media/wsl2-network-l2w.png)
+![從 Windows 存取 Linux 網路應用程式](media/wsl2-network-l2w.png)
 
-## <a name="understanding-wsl-2-uses-a-vhd-and-what-to-do-if-you-reach-its-max-size"></a>了解 WSL 2 使用 VHD，而如果您達到其大小上限，該怎麼辦
-WSL 2 會儲存您所有的 Linux 檔案內使用 ext4 檔案系統的 VHD。 此 VHD 自動調整大小以符合您的儲存體需求。 此 VHD 也具有初始大小上限為 256 GB。 如果您的散發版本成長的大小必須大於 256 GB，您會看到錯誤指出您已用盡磁碟空間。 您可以修正這些方法是展開的 VHD 大小。 有關如何執行這項操作的指示如下：
+### <a name="other-networking-considerations"></a>其他網路功能考慮
 
-1. 終止所有 WSL 執行個體使用`wsl --shutdown`命令
-2. 完成下列命令來調整大小 WSL 2 VHD
-   - 以系統管理員權限開啟命令提示字元 視窗，然後執行下列命令：
+使用遠端 IP 位址連線到您的應用程式時, 系統會將其視為來自區域網路 (LAN) 的連線。 這表示您必須確定您的應用程式可以接受 LAN 連線, 也就是:您可能需要將您的`0.0.0.0` `127.0.0.1`應用程式系結至, 而不是。 例如, 在使用 flask 的 python 中, 可以使用下列命令來`app.run(host='0.0.0.0')`完成此作業:。 在進行這些變更時, 請記住安全性, 因為這會允許來自您 LAN 的連接。 
+
+## <a name="understanding-wsl-2-uses-a-vhd-and-what-to-do-if-you-reach-its-max-size"></a>瞭解 WSL 2 會使用 VHD, 以及當您達到其大小上限時該怎麼辦
+WSL 2 會將您所有的 Linux 檔案儲存在使用 ext4 檔案系統的 VHD 內。 此 VHD 會自動調整大小以符合您的儲存需求。 此 VHD 也具有256GB 的初始大小上限。 如果您的散發版本大小成長得大於 256GB, 您將會看到錯誤, 指出您已用盡磁碟空間。 您可以藉由擴充 VHD 大小來修正這些問題。 有關如何執行此動作的指示如下:
+
+1. 使用`wsl --shutdown`命令終止所有 WSL 實例
+2. 尋找您的散發版本安裝套件名稱 ' PackageFamilyName '
+   - 在 powershell 提示字元中 (其中 ' 散發版本 ' 是您的發佈名稱), 請輸入:
+      - `Get-AppxPackage -Name "*<distro>*" | Select PackageFamilyName`
+3. 找出 WSL 2 安裝所使用的 VHD 檔案 fullpath, 這會是您的 ' pathToVHD ':
+     - `%LOCALAPPDATA%\Packages\<PackageFamilyName>\LocalState\<disk>.vhdx`
+4. 完成下列命令以調整您的 WSL 2 VHD 大小
+   - 以系統管理員許可權開啟 [命令提示字元] 視窗, 然後執行下列命令:
+      - `diskpart`
       - `Select vdisk file="<pathToVHD>"`
       - `expand vdisk maximum="<sizeInMegaBytes>"`
-3. 啟動您的 WSL 散發套件
-4. 請注意，它可以展開其檔案系統的大小 WSL
-   - 在 WSL distro 中，執行下列命令：
+5. 啟動您的 WSL 散發版本
+6. 讓 WSL 知道它可以擴充其檔案系統的大小
+   - 在您的 WSL 散發版本中執行下列命令:
       - `sudo mount -t devtmpfs none /dev`
       - `mount | grep ext4`
-         - 複製此項目，看起來就像的名稱: / sdXX (具有 X 表示任何其他字元)
+         - 複製此專案的名稱, 如下所示:/dev/sdXX (X 代表任何其他字元)
       - `sudo resize2fs /dev/sdXX`
-         - 請確定使用的值之前，複製，而且您可能需要使用： `apt install resize2fs`。
+         - 請務必使用您稍早複製的值, 您可能需要使用: `apt install resize2fs`。
 
-## <a name="wsl-2-will-use-some-memory-on-startup"></a>WSL 2 會使用一些記憶體，在啟動
-WSL 2 會使用輕量級的公用程式 VM 上實際的 Linux 核心提供絕佳的檔案系統的效能和完整的系統呼叫仍正在執行時的相容性，就如同光線，快速、 整合和回應以 WSL 1。 此公用程式 VM 會具有較小的記憶體耗用量，並將備份的虛擬位址上配置的記憶體啟動。 它會設定為啟動與您的總記憶體的一小部分。
+請注意：一般來說, 請不要使用 Windows 工具或編輯器修改、移動或存取位於 AppData 資料夾內的 WSL 相關檔案。 這麼做可能會導致您的 Linux 散發版本損毀。
 
-## <a name="cross-os-file-speed-will-be-slower-in-initial-preview-builds"></a>跨作業系統檔案的速度將會在初始的預覽版組建變慢
-您會發現檔案上的速度比 WSL 1 時從 Linux 應用程式，或從 Windows 應用程式存取 Linux 檔案存取 Windows 檔案。 這是在 WSL 2 的架構變更的結果，是指 WSL 小組正在調查上如何改善這項體驗。
+## <a name="wsl-2-will-use-some-memory-on-startup"></a>WSL 2 會在啟動時使用一些記憶體
+WSL 2 會在實際的 Linux 核心上使用輕量公用程式 VM, 以提供絕佳的檔案系統效能和完整的系統呼叫相容性, 同時仍能以 WSL 1 的速度快速、整合和回應。 此公用程式 VM 具有小型的記憶體使用量, 並會在啟動時配置虛擬位址支援的記憶體。 它會設定為從您總記憶體的一小部分開始。
+
+## <a name="cross-os-file-speed-will-be-slower-in-initial-preview-builds"></a>初次預覽組建中的跨 OS 檔案速度會較慢
+從 Linux 應用程式存取 Windows 檔案, 或從 Windows 應用程式存取 Linux 檔案時, 您會發現相較于 WSL 1 的檔案速度比較慢。 這是 WSL 2 中架構變更的結果, 而 WSL 小組會主動調查如何改善這項體驗。

@@ -1,7 +1,7 @@
 ---
-title: 建置自訂的 Linux Distro WSL
-description: 了解如何建立自訂的 Linux 散發套件的 Windows 子系統，適用於 Linux。
-keywords: BashOnWindows，bash，wsl、 windows、 windows 子系統、 散發版本，自訂
+title: 建立適用于 WSL 的自訂 Linux 散發版本
+description: 瞭解如何為適用于 Linux 的 Windows 子系統建立自訂 Linux 散發套件。
+keywords: BashOnWindows、bash、wsl、windows、windows 子系統、散發版本、custom
 author: taraj
 ms.author: taraj
 ms.date: 03/27/2018
@@ -9,39 +9,39 @@ ms.topic: article
 ms.assetid: a5095219-0c82-4ce5-9a6d-5c2fc00835a3
 ms.custom: seodec18
 ms.openlocfilehash: 4072df5fa81f65fd9a3ff875ab887c03b234bce1
-ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
+ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 06/14/2019
 ms.locfileid: "67040781"
 ---
-# <a name="creating-a-custom-linux-distro-for-wsl"></a>建立自訂的 Linux Distro WSL
+# <a name="creating-a-custom-linux-distro-for-wsl"></a>建立適用于 WSL 的自訂 Linux 散發版本
 
-為 Microsoft Store 建置 WSL 散發套件，及/或建立自訂的側載功能的 Linux 散發套件，請使用我們的開放原始碼 WSL 範例。 您可以找到[distro 啟動器存放庫](https://github.com/Microsoft/WSL-DistroLauncher)GitHub 上。
+使用我們的開放原始碼 WSL 範例來建立適用于 Microsoft Store 和/或的 WSL 散發版本套件, 以建立用於側載的自訂 Linux 散發版本套件。 您可以在 GitHub 上找到[散發版本啟動器](https://github.com/Microsoft/WSL-DistroLauncher)存放庫。
 
-此專案可讓：
-* 若要封裝並送出為 appx 在 WSL 上執行的 Linux 散發套件的 Linux 發行版本維護者
-* 開發人員建立自訂的 Linux 散發套件可以側載至其開發電腦
+此專案會啟用:
+* Linux 散發套件維護人員, 可封裝並提交 Linux 發行版本, 做為在 WSL 上執行的 appx
+* 開發人員建立可側載至其開發電腦的自訂 Linux 發行版本
 
 ## <a name="background"></a>背景
-我們將散發的 Linux 散發版本 WSL 為 UWP 應用程式可以透過 Microsoft Store。 您可以安裝在 WSL-在 Windows 核心中的子系統便會執行這些應用程式。 這個傳遞機制中所述，有許多優點[較早的部落格文章](https://blogs.msdn.microsoft.com/commandline/2017/07/10/ubuntu-now-available-from-the-windows-store/)。
+我們會透過 Microsoft Store, 將 WSL 的 Linux 散發版本作為 UWP 應用程式散發。 您可以安裝將在 WSL 上執行的應用程式, 也就是位於 Windows 核心的子系統。 這項傳遞機制有許多優點, 如[先前的 blog 文章](https://blogs.msdn.microsoft.com/commandline/2017/07/10/ubuntu-now-available-from-the-windows-store/)中所述。
 
-## <a name="sideloading-a-custom-linux-distro-package"></a>側載自訂的 Linux 散發套件
-在您的個人電腦上，您可以為要側載應用程式建立自訂的 Linux 散發套件。 請注意，自訂套件將無法散發透過 Microsoft Store 除非您為發佈維護程式送出。
-若要設定您的電腦，側載應用程式，您必須在 「 適用於開發人員 」 下的系統設定中啟用。  請務必要有開發人員模式或選取的側載應用程式
+## <a name="sideloading-a-custom-linux-distro-package"></a>側載自訂 Linux 散發版本套件
+您可以建立自訂的 Linux 散發版本套件作為應用程式, 以在您的個人電腦上側載。 請注意, 除非您以散發維護程式形式提交, 否則您的自訂套件不會透過 Microsoft Store 散發。
+若要設定您的電腦以側載應用程式, 您必須在 [適用于開發人員] 底下的 [系統設定] 中啟用此功能。  請確定已選取 [開發人員模式] 或 [側載應用程式]
 
-## <a name="for-linux-distro-maintainers"></a>針對 Linux 散發套件維護人員
-若要提交至市集，您必須與我們配合以接收發行的核准。 如果您想要將您的散發套件新增至 Microsoft Store 的 Linux 發佈擁有者，請連絡wslpartners@microsoft.com。
+## <a name="for-linux-distro-maintainers"></a>針對 Linux 散發版本維護人員
+若要提交到商店, 您必須與我們合作以接收發行核准。 如果您是想要將散發新增至 Microsoft Store 的 Linux 散發擁有者, 請洽詢wslpartners@microsoft.com。
 
 ## <a name="getting-started"></a>開始使用
-遵循上的指示[Distro 啟動器 GitHub 存放庫](https://github.com/Microsoft/WSL-DistroLauncher)來建立自訂的 Linux 散發套件。
+依照[散發版本啟動器 GitHub](https://github.com/Microsoft/WSL-DistroLauncher)存放庫中的指示, 建立自訂的 Linux 散發版本套件。
 
  
-## <a name="team-blogs"></a>小組部落格
-*  [開啟來源 WSL 範例 Linux 發行版本維護者和側載自訂的 Linux 散發套件](https://blogs.msdn.microsoft.com/commandline/2018/03/26/wsl-distro-launcher/)
-* [命令列的部落格](https://blogs.msdn.microsoft.com/commandline/)
+## <a name="team-blogs"></a>小組 Blog
+*  [開放採購 Linux 散發維護人員和側載自訂 Linux 發行版本的 WSL 範例](https://blogs.msdn.microsoft.com/commandline/2018/03/26/wsl-distro-launcher/)
+* [命令列的 blog](https://blogs.msdn.microsoft.com/commandline/)
 
 ## <a name="provide-feedback"></a>提供意見反應
-* [Distro 啟動器 GitHub 存放庫](https://github.com/Microsoft/WSL-DistroLauncher)
-* [WSL 的 GitHub 問題追蹤器](https://github.com/Microsoft/BashOnWindows/issues)
-* [命令列的 UserVoice 入口網站](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/category/161892-bash)
+* [散發版本啟動器 GitHub 存放庫](https://github.com/Microsoft/WSL-DistroLauncher)
+* [適用于 WSL 的 GitHub 問題追蹤器](https://github.com/Microsoft/BashOnWindows/issues)
+* [命令列 UserVoice 入口網站](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/category/161892-bash)
