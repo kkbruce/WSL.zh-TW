@@ -1,3 +1,3 @@
-# <a name="af-unix-sample"></a><span data-ttu-id="7ec41-101">AF-Unix-Sample</span><span class="sxs-lookup"><span data-stu-id="7ec41-101">AF-Unix-Sample</span></span>
+# <a name="af-unix-sample"></a><span data-ttu-id="58943-101">AF-Unix-範例</span><span class="sxs-lookup"><span data-stu-id="58943-101">AF-Unix-Sample</span></span>
 
-<span data-ttu-id="7ec41-102">示範 AF_UNIX 互通 WSL 與 Windows 處理程序的示範。</span><span class="sxs-lookup"><span data-stu-id="7ec41-102">Demo demonstrating AF_UNIX interop between a WSL and Windows process.</span></span> <span data-ttu-id="7ec41-103">如需功能的詳細資訊，請參閱 WSL Commandline 部落格。</span><span class="sxs-lookup"><span data-stu-id="7ec41-103">COnsult the WSL Commandline blog for more information on the feature.</span></span>
+<span data-ttu-id="58943-102">示範如何在 WSL 和 Windows 進程之間 AF_UNIX interop。</span><span class="sxs-lookup"><span data-stu-id="58943-102">Demo demonstrating AF_UNIX interop between a WSL and Windows process.</span></span> <span data-ttu-id="58943-103">如需此功能的詳細資訊, 請參閱 WSL 命令列 blog。</span><span class="sxs-lookup"><span data-stu-id="58943-103">COnsult the WSL Commandline blog for more information on the feature.</span></span>
