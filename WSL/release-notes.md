@@ -7,15 +7,49 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: e2d9d5fc70c173e9b516ab7af01599b623b40b39
-ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
+ms.openlocfilehash: d2d91db24c12fc674d695ccffc79eb5781a0721d
+ms.sourcegitcommit: be00abbb170aa569e008b804f15949344b378999
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67042421"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68501579"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>適用于 Linux 的 Windows 子系統版本資訊
 
+
+## <a name="build-18947"></a>組建18947
+如需組建18947的一般 Windows 資訊, 請造訪[windows blog](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18947/)。
+
+### <a name="wsl"></a>WSL
+* [WSL2]允許使用 localhost: port 從主機存取 WSL2 中的接聽 tcp 通訊端
+* [WSL2]修正安裝/轉換失敗和其他診斷以追蹤未來問題 [GH 4105] 
+* [WSL2]改善 WSL2 網路問題的診斷
+* [WSL2]將核心版本更新為4.19.55
+* [WSL2]使用 docker 所需的設定選項更新核心 [GH 4165]
+* [WSL2]增加指派給輕量公用程式 VM 的 Cpu 數目, 使其與主機相同 (之前在核心設定中 CONFIG_NR_CPUS 的上限為 8) [GH 4137]
+* [WSL2]建立 WSL2 輕量 VM 的交換檔
+* [WSL2]允許透過\\ \\wsl $\\散發版本顯示使用者裝載 (例如 sshfs) [GH 4172]
+* [WSL2]改善9p 檔案系統效能
+* [WSL2]確保 vhd ACL 沒有無限成長 [GH 4126]
+* [WSL2]更新核心設定以支援 squashfs 和 xt_conntrack [GH 4107, 4123]
+* [WSL2]修正 interop. enabled/etc/wsl.conf 選項 [GH 4140]
+* [WSL2]如果檔案系統不支援 EAs, 則傳回 ENOTSUP
+* [WSL2]修正具有 wsl $ \\的\\CopyFile 停止回應
+* 將預設 umask 切換至 0022, 並將 filesystem. umask 設定新增至/etc/wsl.conf
+* 修正 wslpath 以適當地解決符號連結, 這是回歸在 19h1 [GH 4078]
+* 引進% UserProfile%\.wslconfig 檔案以調整 WSL2 設定
+```
+[wsl2]
+kernel=<path>              # An absolute Windows path to a custom Linux kernel.
+memory=<size>              # How much memory to assign to the WSL2 VM.
+processors=<number>        # How many processors to assign to the WSL2 VM.
+swap=<size>                # How much swap space to add to the WSL2 VM. 0 for no swap file.
+swapFile=<path>            # An absolute Windows path to the swap vhd.
+localhostForwarding=<bool> # Boolean specifying if ports bound to wildcard or localhost in the WSL2 VM should be connectable from the host via localhost:port (default true).
+
+# <path> entries must be absolute Windows paths with escaped backslashes, for example C:\\Users\\Ben\\kernel
+# <size> entries must be size followed by unit, for example 8GB or 512MB
+```
 
 ## <a name="build-18917"></a>組建18917
 如需組建18917的一般 Windows 資訊, 請造訪[windows blog](https://blogs.windows.com/windowsexperience/2019/06/12/announcing-windows-10-insider-preview-build-18917/)。
