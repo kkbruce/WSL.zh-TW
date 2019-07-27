@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.openlocfilehash: a74f5e3f5879d0af274d2e2b10aaf05e95a97a6f
-ms.sourcegitcommit: e16097a3d863bbda8c4655054f154415cdd7f2f5
+ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 07/26/2019
 ms.locfileid: "67587146"
 ---
 # <a name="wsl-2-faq"></a>WSL 2 常見問題
@@ -33,7 +33,7 @@ WSL 2 將在 WSL 目前可用的所有 Sku 上提供, 包括 Windows 10 家用�
 
 當 Hyper-v 在使用中時, 有些協力廠商應用程式無法運作, 這表示在啟用 WSL 2 時將無法執行。 可惜的是, 這包括 VMware 和 VirtualBox 6 之前的 VirtualBox 版本 (2018 年12月發行的 VirtualBox 6.0.0[現在支援 hyper-v 做為 Windows 主機上的 fallback 執行核心][1]!)
 
-我們正在調查協助解決此問題的方法。 例如, 我們公開一組稱為「[虛擬機器平臺][2] that third-party virtualization providers can use to make their software compatible with Hyper-V’s. This lets applications use the Hyper-V architecture for their emulation such as [the Google Android Emulator][3]」的 api, 以及 VirtualBox 6 和更新版本, 兩者現在都與 hyper-v 相容。
+我們正在調查協助解決此問題的方法。 例如, 我們公開一組稱為「[虛擬機器平臺][2]」的 api, 協力廠商虛擬化提供者可以使用它來使其軟體與 hyper-v 相容。 這可讓應用程式使用 Hyper-v 架構來進行模擬, 例如[Google Android Emulator][3], 而 VirtualBox 6 和更新版本現在兩者都與 hyper-v 相容。
 
 ## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a>我可以在 WSL 2 中存取 GPU 嗎？ 是否有計劃增加硬體支援？
 

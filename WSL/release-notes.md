@@ -7,18 +7,18 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: d2d91db24c12fc674d695ccffc79eb5781a0721d
-ms.sourcegitcommit: be00abbb170aa569e008b804f15949344b378999
+ms.openlocfilehash: c262ddb359507c1654f0089050bfd15ec16402f9
+ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68501579"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68523788"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>適用于 Linux 的 Windows 子系統版本資訊
 
 
-## <a name="build-18947"></a>組建18947
-如需組建18947的一般 Windows 資訊, 請造訪[windows blog](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18947/)。
+## <a name="build-18945"></a>組建18945
+如需組建18945的一般 Windows 資訊, 請造訪[windows blog](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18945/)。
 
 ### <a name="wsl"></a>WSL
 * [WSL2]允許使用 localhost: port 從主機存取 WSL2 中的接聽 tcp 通訊端

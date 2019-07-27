@@ -8,16 +8,16 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: 55cea2c4b7087f3dd8a29986aaddc8c313763448
-ms.sourcegitcommit: b07769a3140db9ac63e42c7d7d1290c0bad8c40d
+ms.openlocfilehash: bf2f2e24fb8a2db49270fb77558d4fda1828dedf
+ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67467553"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68523775"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>手動下載適用于 Linux 的 Windows 子系統散發版本套件
 
-在幾種情況下, 您可能無法 (或想要) 透過 Microsoft Store 安裝 WSL Linux 散發版本。 具體而言, 您可能正在執行不支援 Microsoft Store 的 Windows Server 或長期維護 (LTSB/LTSC) 桌面作業系統 SKU, 或公司網路原則及/或系統管理員不允許在您的環境中使用 Microsoft Store。
+在幾種情況下, 您可能無法 (或想要) 透過 Microsoft Store 安裝 WSL Linux 散發版本。 具體而言, 您可能正在執行不支援 Microsoft Store 的 Windows Server 或長期維護 (LTSC) 桌面作業系統 SKU, 或公司網路原則及/或系統管理員不允許在您的環境中使用 Microsoft Store。
 
 在這些情況下, 雖然 WSL 本身可供使用, 如果您無法存取存放區, 如何在 WSL 中下載並安裝 Linux 散發版本？
 
