@@ -1,7 +1,7 @@
 ---
 title: 在 Windows Server 上安裝 Linux 子系統
 description: Windows Server 上 Linux 子系統的安裝指示。
-keywords: BashOnWindows、bash、wsl、windows、適用于 linux 的 windows 子系統、windowssubsystem、ubuntu、windows server
+keywords: BashOnWindows、bash、wsl、windows、適用於 linux 的 windows 子系統、windowssubsystem、ubuntu、windows server
 author: scooley
 ms.author: scooley
 ms.date: 05/22/2018
@@ -17,13 +17,13 @@ ms.locfileid: "67308794"
 ---
 # <a name="windows-server-installation-guide"></a>Windows Server 安裝指南
 
-> 適用于 Windows Server 2019 和更新版本
+> 適用於 Windows Server 2019 和更新版本
 
-在//Build2017, Microsoft 宣佈 windows Server 上適用于 Linux 的 Windows 子系統將可[供使用](https://blogs.technet.microsoft.com/hybridcloud/2017/05/10/windows-server-for-developers-news-from-microsoft-build-2017/)。  這些指示會逐步解說如何在 Windows Server 1709 和更新版本上執行適用于 Linux 的 Windows 子系統。
+在//Build2017, Microsoft 宣佈 windows Server 上適用於 Linux 的 Windows 子系統將可[供使用](https://blogs.technet.microsoft.com/hybridcloud/2017/05/10/windows-server-for-developers-news-from-microsoft-build-2017/)。  這些指示會逐步解說如何在 Windows Server 1709 和更新版本上執行適用於 Linux 的 Windows 子系統。
 
-## <a name="enable-the-windows-subsystem-for-linux-wsl"></a>啟用適用于 Linux 的 Windows 子系統 (WSL)
+## <a name="enable-the-windows-subsystem-for-linux-wsl"></a>啟用適用於 Linux 的 Windows 子系統 (WSL)
 
-您必須先啟用「適用于 Linux 的 Windows 子系統」選用功能並重新啟動, 才可以在 Windows 上執行 Linux 散發版本。
+您必須先啟用「適用於 Linux 的 Windows 子系統」選用功能並重新啟動, 才可以在 Windows 上執行 Linux 散發版本。
 
 1. 以系統管理員身分開啟 PowerShell 並執行:
     ```powershell
