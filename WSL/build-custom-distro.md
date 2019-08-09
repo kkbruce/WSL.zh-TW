@@ -1,6 +1,6 @@
 ---
-title: 建立適用于 WSL 的自訂 Linux 散發版本
-description: 瞭解如何為適用于 Linux 的 Windows 子系統建立自訂 Linux 散發套件。
+title: 建立適用於 WSL 的自訂 Linux 發行版本
+description: 了解如何為適用於 Linux 的 Windows 子系統建立自訂 Linux 發行套件。
 keywords: BashOnWindows、bash、wsl、windows、windows 子系統、散發版本、custom
 author: taraj
 ms.author: taraj
@@ -15,7 +15,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 06/14/2019
 ms.locfileid: "67040781"
 ---
-# <a name="creating-a-custom-linux-distro-for-wsl"></a>建立適用于 WSL 的自訂 Linux 散發版本
+# <a name="creating-a-custom-linux-distro-for-wsl"></a>建立適用於 WSL 的自訂 Linux 發行版本
 
 使用我們的開放原始碼 WSL 範例來建立適用于 Microsoft Store 和/或的 WSL 散發版本套件, 以建立用於側載的自訂 Linux 散發版本套件。 您可以在 GitHub 上找到[散發版本啟動器](https://github.com/Microsoft/WSL-DistroLauncher)存放庫。
 
