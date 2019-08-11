@@ -31,17 +31,17 @@ ms.locfileid: "67040781"
 若要設定您的電腦以側載應用程式，您必須在 [適用於開發人員] 底下的 [系統設定] 中啟用此功能。  請確定已選取開發人員模式，或選取側載應用程式
 
 ## <a name="for-linux-distro-maintainers"></a>適用於 Linux 發行版本維護人員
-若要提交到商店, 您必須與我們合作以接收發行核准。 如果您是想要將散發新增至 Microsoft Store 的 Linux 散發擁有者, 請洽詢wslpartners@microsoft.com。
+若要提交到商店，您必須與我們合作以接收發行核准。 如果您是想要將發行版本新增至 Microsoft Store 的 Linux 發行版本擁有者，請透過 wslpartners@microsoft.com 與我們連絡。
 
 ## <a name="getting-started"></a>開始使用
-依照[散發版本啟動器 GitHub](https://github.com/Microsoft/WSL-DistroLauncher)存放庫中的指示, 建立自訂的 Linux 散發版本套件。
+依照[發行版本啟動器 GitHub 存放庫](https://github.com/Microsoft/WSL-DistroLauncher)中的指示建立自訂 Linux 發行版本套件。
 
  
 ## <a name="team-blogs"></a>小組 Blog
-*  [開放採購 Linux 散發維護人員和側載自訂 Linux 發行版本的 WSL 範例](https://blogs.msdn.microsoft.com/commandline/2018/03/26/wsl-distro-launcher/)
+*  [將適用於 Linux 發行版本維護人員的 WSL 變更為開放原始碼及側載自訂 Linux 發行版本](https://blogs.msdn.microsoft.com/commandline/2018/03/26/wsl-distro-launcher/)
 * [命令列的 blog](https://blogs.msdn.microsoft.com/commandline/)
 
 ## <a name="provide-feedback"></a>提供意見反應
-* [散發版本啟動器 GitHub 存放庫](https://github.com/Microsoft/WSL-DistroLauncher)
+* [發行版本啟動器 GitHub 存放庫](https://github.com/Microsoft/WSL-DistroLauncher)
 * [適用于 WSL 的 GitHub 問題追蹤器](https://github.com/Microsoft/BashOnWindows/issues)
 * [命令列 UserVoice 入口網站](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/category/161892-bash)
