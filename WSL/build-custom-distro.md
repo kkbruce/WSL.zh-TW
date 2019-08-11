@@ -43,5 +43,5 @@ ms.locfileid: "67040781"
 
 ## <a name="provide-feedback"></a>提供意見反應
 * [發行版本啟動器 GitHub 存放庫](https://github.com/Microsoft/WSL-DistroLauncher)
-* [適用于 WSL 的 GitHub 問題追蹤器](https://github.com/Microsoft/BashOnWindows/issues)
+* [適用於 WSL 的 GitHub 問題追蹤器](https://github.com/Microsoft/BashOnWindows/issues)
 * [命令列 UserVoice 入口網站](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/category/161892-bash)
