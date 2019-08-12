@@ -1,7 +1,9 @@
 ---
+
 標題：初始化新的 WSL Linux 發行版本
 說明：安裝適用於 WSL 的 Linux 發行版本之後，請遵循下列簡單步驟來完成初始化
 關鍵字: BashOnWindows, bash, wsl, windows, 適用於 linux 的 windows 子系統, windowssubsystem, ubuntu, debian, suse, windows 10
+
 author: taraj
 ms.author: taraj
 ms.date: 07/24/2018
