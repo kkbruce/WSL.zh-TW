@@ -1,6 +1,6 @@
 ---
 title: 常見問題集 (FAQ)
-description: 適用于 Linux 的 Windows 子系統常見問題。
+description: 適用於 Linux 的 Windows 子系統常見問題集。
 keywords: BashOnWindows、bash、wsl、windows、windowssubsystem、常見問題
 author: taraj
 ms.author: taraj
@@ -14,27 +14,27 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 06/19/2019
 ms.locfileid: "67237384"
 ---
-# <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>適用于 Linux 的 Windows 子系統常見問題
+# <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>適用於 Linux 的 Windows 子系統常見問題集
 
-## <a name="what-is-windows-subsystem-for-linux-wsl"></a>什麼是適用于 Linux 的 Windows 子系統 (WSL)？
-適用于 Linux 的 Windows 子系統 (WSL) 是新的 Windows 10 功能, 可讓您直接在 Windows 上執行原生 Linux 命令列工具, 以及傳統的 Windows 桌面和新式存放區應用程式。
+## <a name="what-is-windows-subsystem-for-linux-wsl"></a>什麼是適用於 Linux 的 Windows 子系統 (WSL)？
+適用於 Linux 的 Windows 子系統 (WSL) 是新的 Windows 10 功能，可讓您直接在 Windows 上執行原生 Linux 命令列工具，以及傳統的 Windows 傳統型與新式 Store 應用程式。
 
 如需詳細資訊, 請參閱[about 頁面](./about.md)。
 
-## <a name="who-is-wsl-for"></a>誰 WSL？
-這主要是適用于開發人員的工具, 特別是 網頁程式開發人員, 也是使用開放原始碼專案的使用者。 這可讓想要/需要使用 Bash、通用 Linux 工具 (`sed`、 `awk`等) 的使用者, 以及許多 Linux 優先工具 (Ruby、Python 等) 使用其在 Windows 上的工具鏈。
+## <a name="who-is-wsl-for"></a>WSL 適用於什麼人？
+這主要是適用於開發人員的工具，特別是 Web 開發人員，以及那些處理或使用開放原始碼專案的人。 這可讓想要/需要使用 Bash、常見 Linux 工具 (`sed`、`awk` 等) 以及許多 Linux 優先工具 (Ruby、Python 等) 的人在 Windows 上使用其工具鏈。
 
 ## <a name="what-can-i-do-with-wsl"></a>我可以使用 WSL 來做什麼？
-WSL 會提供名為 Bash 的應用程式, 啟動時, 會開啟執行 Bash shell 的 Windows 主控台。 使用 Bash, 您可以執行命令列 Linux 工具和應用程式。 例如, `lsb_release -a`輸入並按 enter 鍵, 您會看到目前正在執行之 Linux 散發版本的詳細資料:
+WSL 提供名為 Bash 的應用程式，當此應用程式啟動時，會開啟執行 Bash 殼層的 Windows 主控台。 使用 Bash，您可以執行命令列 Linux 工具和應用程式。 例如，輸入 `lsb_release -a` 並按 Enter：您將會看到目前正在執行之 Linux 發行版本的詳細資料：
 
-![散發版本詳細資料的螢幕擷取畫面](media/distro.png)
+![發行版本詳細資料的螢幕擷取畫面](media/distro.png)
 
-您也可以從 Linux Bash shell 記憶體取本機電腦的檔案系統–您會在`/mnt`資料夾下找到掛接的本機磁片磁碟機。 例如, 您的`C:`磁片磁碟機`/mnt/c`裝載于:  
+您也可以從 Linux Bash 殼層存取您本機電腦的檔案系統 – 您將可以在 `/mnt` 資料夾下發現裝載的本機磁碟機。 例如，您的 `C:` 磁碟機裝載於 `/mnt/c` 下：  
 
 ![裝載的 C 磁片磁碟機螢幕擷取畫面](media/ls.png)
 
 ## <a name="what-is-bash"></a>什麼是 Bash？
-[Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29)是常用的文字型命令介面和命令語言。 這是包含在 Ubuntu 和其他 Linux 散發版本中的預設 shell, 也是在 macOS 中。 使用者在 shell 中輸入命令來執行腳本及/或執行命令和工具, 以完成許多工具。
+[Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) 是熱門的文字型殼層與命令語言。 它是包含在 Ubuntu 和其他 Linux 發行版本以及 macOS 中的預設殼層。 使用者在殼層中輸入命令來執行指令碼和/或執行命令和工具以完成許多工作。
 
 ## <a name="how-does-this-work"></a>這是如何運作？
 查看我們的[blog](https://blogs.msdn.microsoft.com/wsl/) , 我們將詳細說明基礎技術。
@@ -62,7 +62,7 @@ WSL 不是用來支援 GUI 桌上型電腦或應用程式 (例如 GNOME、KDE �
 此外, 即使您可以執行許多熱門的伺服器應用程式 (例如 Redis), 也不建議使用 WSL 來裝載生產服務– Microsoft 提供各種解決方案, 讓您在 Azure、Hyper-v 和 Docker 中執行生產 Linux 工作負載。 
 
 ## <a name="what-windows-skus-is-wsl-included-in"></a>WSL 包含哪些 Windows Sku？
-適用于 Linux 的 windows 子系統可在 windows 10 年度版和建立者更新或更新版本的 Windows 桌上出版本上取得。
+「適用於 Linux 的 Windows 子系統」可在 Windows 10 年度更新版和 Creators Update 或更新版本中的 Windows 電腦版本上找到。
 
 從秋季建立者更新 WSL 將可在 Windows 的桌面和伺服器 Sku 上取得。
 
@@ -70,7 +70,7 @@ WSL 不是用來支援 GUI 桌上型電腦或應用程式 (例如 GNOME、KDE �
 WSL 支援 x64 和 ARM Cpu。
 
 ## <a name="how-do-i-access-my-c-drive"></a>如何? 存取我的 C: 磁片磁碟機嗎？
-本機電腦上的硬碟掛接點會自動建立, 並可讓您輕鬆存取 Windows 檔案系統。 
+本機電腦上的硬碟掛接點會自動建立，並可讓您輕鬆存取 Windows 檔案系統。 
  
 **于/mnt/\<磁碟機號 >/**
  
@@ -80,7 +80,7 @@ WSL 支援 x64 和 ARM Cpu。
 
 WSL 的其中一項優點是能夠透過 Windows 和 Linux 應用程式或工具存取您的檔案。 
 
-WSL 會將您電腦的固定磁片磁碟機`/mnt/<drive>`掛接在 Linux 散發版本的資料夾底下。 例如, 您`C:`的磁片磁碟機裝載于`/mnt/c/` 
+WSL 會將您電腦的固定式磁碟機掛接在您 Linux 發行版本的 `/mnt/<drive>` 資料夾下。 例如，您的 `C:` 磁碟機掛接在 `/mnt/c/` 下。 
 
 使用您載入的磁片磁碟機, 您可以在中編輯程式碼`C:\dev\myproj\` , 例如, 使用[Visual Studio](https://visualstudio.microsoft.com/vs/) /或[VS Code](https://code.visualstudio.com/), 然後透過存取相同`/mnt/c/dev/myproj`的檔案, 在 Linux 中建立/測試該程式碼。
 
@@ -98,8 +98,8 @@ WSL 會將您電腦的固定磁片磁碟機`/mnt/<drive>`掛接在 Linux 散發�
    * 支援區分大小寫
    * 擁有權限都設定為最佳反映 Windows 許可權
 
-## <a name="why-are-there-so-many-errors-when-i-run-apt-get-upgrade"></a>當我執行 apt 時, 為什麼會發生太多錯誤-取得升級？
-有些套件會使用我們尚未實行的功能。 `udev`例如, 尚不支援, 而且會導致數`apt-get upgrade`個錯誤。
+## <a name="why-are-there-so-many-errors-when-i-run-apt-get-upgrade"></a>當我執行 apt-get upgrade 時，為什麼會發生太多錯誤？
+有些套件會使用我們尚未實作的功能。 例如，上不支援 `udev`，而且它會導致數個 `apt-get upgrade` 錯誤。
 
 若要修正與相關`udev`的問題, 請遵循下列步驟:
 

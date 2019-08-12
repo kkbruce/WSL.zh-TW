@@ -1,7 +1,9 @@
 ---
 title: Linux 使用者帳戶和許可權
+
 說明: 適用於 Linux 的 Windows 子系統的使用者帳戶和版權管理的參考。
 關鍵字: BashOnWindows、bash、wsl、windows、適用於 linux 的 windows 子系統、windowssubsystem、ubuntu、使用者帳戶
+
 author: scooley
 ms.author: scooley
 ms.date: 09/11/2017
@@ -22,7 +24,9 @@ ms.locfileid: "67040830"
 1. 這是您的預設使用者--它會在啟動時自動登入。
 1. 預設為 Linux 系統管理員 (sudo 群組的成員)。
 
+
 在適用於 Linux 的 Windows 子系統上執行的每個 Linux 散發套件都有自己的 Linux 使用者帳戶和密碼。 每當您新增散發、重新安裝或重設時, 都必須設定 Linux 使用者帳戶。 Linux 使用者帳戶不只是每個散發套件都獨立, 它們也獨立於您的 Windows 使用者帳戶。
+
 
 ## <a name="resetting-your-linux-password"></a>重設您的 Linux 密碼
 
@@ -102,7 +106,9 @@ Usage:
     C:\> ubuntu config --default-user root
     ```    
 
+
 1. 啟動您的 Linux 散發`ubuntu`套件。您將會自動登入為`root`:
+
 
 1. 使用命令重設您`passwd`的密碼:
 
