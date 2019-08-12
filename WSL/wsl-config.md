@@ -159,9 +159,9 @@ PS C:\Users\sarah>
 > **注意**：一旦取消註冊, 所有與該發佈相關聯的資料、設定和軟體都會永久遺失。  從存放區重新安裝將會安裝一份全新的發行套件。
 
 `wsl --unregister <DistributionName>`  
-從 WSL 取消註冊散發, 使其可以重新安裝或清除。
+從 WSL 取消註冊發行, 使其可以重新安裝或清除。
 
-例如: `wsl --unregister Ubuntu`會從 WSL 中提供的散發套件中移除 Ubuntu。  當我執行`wsl --list`時, 將不會列出。
+例如: `wsl --unregister Ubuntu`會從 WSL 中提供的發行套件中移除 Ubuntu。  當我執行`wsl --list`時, 將不會列出。
 
 若要重新安裝, 請在 Microsoft store 中尋找發佈, 然後選取 [啟動]。
 
@@ -169,17 +169,17 @@ PS C:\Users\sarah>
 
 `wsl -u <Username>`、 `wsl --user <Username>`
 
-以指定的使用者身分執行 WSL。 請注意, 使用者必須存在於 WSL 散發內。
+以指定的使用者身分執行 WSL。 請注意, 使用者必須存在於 WSL 發行內。
 
-#### <a name="run-a-specific-distribution"></a>執行特定的散發套件
+#### <a name="run-a-specific-distribution"></a>執行特定的發行套件
 
 `wsl --d <DistributionName>`、 `wsl --distribution <DistributionName>`
 
-執行指定的 WSL 散發, 可以用來將命令傳送至特定的散發, 而不需要變更預設值。
+執行指定的 WSL 發行, 可以用來將命令傳送至特定的發行, 而不需要變更預設值。
 
-### <a name="versions-earlier-than-windows-10-version-1903"></a>早于 Windows 10 版本1903的版本
+### <a name="versions-earlier-than-windows-10-version-1903"></a>早於 Windows 10 版本1903的版本
 
-WSL Config (`wslconfig.exe`) 是一種命令列工具, 可用於管理在適用于 linux 的 Windows 子系統 (WSL) 上執行的 linux 發行版本。  它可讓您列出可用的發行版本、設定預設的散發, 以及卸載發行版本。
+WSL Config (`wslconfig.exe`) 是一種命令列工具, 可用於管理在適用於 linux 的 Windows 子系統 (WSL) 上執行的 linux 發行版本。  它可讓您列出可用的發行版本、設定預設的發行, 以及卸載發行版本。
 
 雖然 WSL Config 對於跨越或協調散發的設定很有説明, 但每個 Linux 散發套件會獨立管理自己的設定。  若要查看發行特定的命令, `[distro.exe] /?`請執行。  例如 `ubuntu /?`。
 
@@ -225,9 +225,9 @@ Usage:
 > **注意**：一旦取消註冊, 所有與該發佈相關聯的資料、設定和軟體都會永久遺失。  從存放區重新安裝將會安裝一份全新的發行套件。
 
 `wslconfig /unregister <DistributionName>`  
-從 WSL 取消註冊散發, 使其可以重新安裝或清除。
+從 WSL 取消註冊發行, 使其可以重新安裝或清除。
 
-例如: `wslconfig /unregister Ubuntu`會從 WSL 中提供的散發套件中移除 Ubuntu。  當我執行`wslconfig /list`時, 將不會列出。
+例如: `wslconfig /unregister Ubuntu`會從 WSL 中提供的發行套件中移除 Ubuntu。  當我執行`wslconfig /list`時, 將不會列出。
 
 若要重新安裝, 請在 Microsoft store 中尋找發佈, 然後選取 [啟動]。
 
