@@ -1,7 +1,7 @@
 ---
-title: 初始化新的 WSL Linux 發行版本
-description: 安裝適用于 WSL 的 Linux 發行版本之後, 請遵循下列簡單步驟來完成初始化
-keywords: BashOnWindows, bash, wsl, windows, 適用於 linux 的 windows 子系統, windowssubsystem, ubuntu, debian, suse, windows 10
+標題：初始化新的 WSL Linux 發行版本
+說明：安裝適用於 WSL 的 Linux 發行版本之後，請遵循下列簡單步驟來完成初始化
+關鍵字: BashOnWindows, bash, wsl, windows, 適用於 linux 的 windows 子系統, windowssubsystem, ubuntu, debian, suse, windows 10
 author: taraj
 ms.author: taraj
 ms.date: 07/24/2018
@@ -37,23 +37,23 @@ ms.locfileid: "67499293"
 
 ![Windows 主控台中的 Ubuntu 解壓縮](media/UbuntuInstall.png)
 
-這個使用者帳戶是針對您在啟動發行版本時, 預設將登入的一般非系統管理員使用者。
+這個使用者帳戶是針對您在啟動散發版本時, 預設將登入的一般非系統管理員使用者。
 
 > 您可以選擇任何您想要的使用者名稱和密碼, 而不會影響您的 Windows 使用者名稱。 
 
-當您開啟新的發行版本實例時, 系統不會提示您輸入密碼, 但**如果您使用`sudo`** 來提高進程的許可權, 就必須輸入您的密碼, 因此請務必選擇您可以輕鬆記住的密碼! 如需詳細資訊, 請參閱[使用者支援](user-support.md)頁面。
+當您開啟新的散發版本實例時, 系統不會提示您輸入密碼, 但**如果您使用`sudo`** 來提高處理程序的許可權, 就必須輸入密碼, 因此請務必選擇您可以輕鬆記住的密碼! 如需詳細資訊, 請參閱[使用者支援](user-support.md)頁面。
 
-## <a name="update--upgrade-your-distros-packages"></a>更新 & 升級發行版本的套件
+## <a name="update--upgrade-your-distros-packages"></a>更新 & 升級散發版本的套件
 
-大部分的發行版本都隨附空的/最小的套件目錄。 我們強烈建議您定期更新您的套件目錄, 並使用發行版本的慣用套件管理員升級已安裝的套件。 在 Debian/Ubuntu 上, 您可以使用 apt:
+大部分的散發版本都隨附空的/最小的套件目錄。 我們強烈建議您定期更新您的套件目錄, 並使用散發版本的慣用套件管理員升級已安裝的套件。 在 Debian/Ubuntu 上, 您可以使用 apt:
 
 ```bash
 sudo apt update && sudo apt upgrade
 ```
 
-> Windows 不會自動更新或升級您的 Linux 發行版本:這是 Linux 使用者偏好控制自己的工作。
+> Windows 不會自動更新或升級您的 Linux 散發版本:這是 Linux 使用者偏好控制自己的工作。
 
-大功告成！ 在 WSL 上盡情使用您的新 Linux 發行版本! 若要深入瞭解 WSL, 請參閱其他[WSL](https://aka.ms/wsldocs)檔或[WSL learning 資源頁面](https://aka.ms/learnwsl)。
+大功告成！ 在 WSL 上盡情使用您的新 Linux 散發版本! 若要深入瞭解 WSL, 請參閱其他[WSL](https://aka.ms/wsldocs)檔或[WSL learning 資源頁面](https://aka.ms/learnwsl)。
 
 ![在 WSL 上享用使用 Linux](media/linux-on-wsl.png)
 
