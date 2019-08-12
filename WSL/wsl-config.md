@@ -124,39 +124,39 @@ PS C:\Users\sarah>
 
 ### <a name="windows-10-version-1903-and-later"></a>Windows 10 版本1903和更新版本
 
-您可以使用`wsl.exe`在適用于 Linux 的 Windows 子系統 (WSL) 中管理您的散發套件, 包括列出可用的發行版本、設定預設發佈, 以及卸載發行版本。
+您可以使用`wsl.exe`在適用於 Linux 的 Windows 子系統 (WSL) 中管理您的發行套件, 包括列出可用的發行版本、設定預設發佈, 以及卸載發行版本。
 
-每個 Linux 散發套件都會獨立管理自己的設定。 若要查看散發特定的命令, `[distro.exe] /?`請執行。  例如 `ubuntu /?`。
+每個 Linux 發行套件都會獨立管理自己的設定。 若要查看發行特定的命令, `[distro.exe] /?`請執行。  例如 `ubuntu /?`。
 
 #### <a name="list-distributions"></a>列出發行版本
 
 `wsl -l`,`wsl --list`  
-列出可用的 Linux 散發套件, 可供 WSL。  如果已列出散發套件, 則會加以安裝並可供使用。
+列出可供 WSL 使用的 Linux 發行套件。  如果已列出發行套件, 則會加以安裝並可供使用。
 
 `wsl --list --all`   
-列出所有發行版本, 包括目前無法使用的散發套件。  它們可能正在安裝、卸載或處於中斷狀態。  
+列出所有發行版本, 包括目前無法使用的發行套件。  它們可能正在安裝、卸載或處於中斷狀態。  
 
 `wsl --list --running`   
 列出目前正在執行的所有發行版本。
 
-#### <a name="set-a-default-distribution"></a>設定預設散發
+#### <a name="set-a-default-distribution"></a>設定預設發行
 
-預設 WSL 分佈是在命令列上執行`wsl`時所執行的散發。
+預設 WSL 發行是在命令列上執行`wsl`時所執行的發行版本。
 
 `wsl -s <DistributionName>`、 `wsl --setdefault <DistributionName>`
 
-將預設散發設定為`<DistributionName>`。
+將預設發行設定為`<DistributionName>`。
 
 **範例:**  
-`wsl -s Ubuntu`會將預設散發設定為 Ubuntu。  現在當我執行`wsl npm init`時, 它會在 Ubuntu 中執行。  如果我執行`wsl`它, 就會開啟 Ubuntu 會話。
+`wsl -s Ubuntu`會將預設發行設定為 Ubuntu。  現在當我執行`wsl npm init`時, 它會在 Ubuntu 中執行。  如果我執行`wsl`它, 就會開啟 Ubuntu 會話。
 
-#### <a name="unregister-and-reinstall-a-distribution"></a>取消註冊並重新安裝散發套件
+#### <a name="unregister-and-reinstall-a-distribution"></a>取消註冊並重新安裝發行套件
 
-雖然 Linux 散發套件可透過 Microsoft store 安裝, 但無法透過存放區卸載。  WSL Config 允許取消註冊/卸載發行。
+雖然 Linux 發行套件可透過 Microsoft store 安裝, 但無法透過存放區卸載。  WSL Config 允許取消註冊/卸載發行。
 
 取消註冊也允許重新安裝發佈。
 
-> **注意**：一旦取消註冊, 所有與該發佈相關聯的資料、設定和軟體都會永久遺失。  從存放區重新安裝將會安裝一份全新的散發套件。
+> **注意**：一旦取消註冊, 所有與該發佈相關聯的資料、設定和軟體都會永久遺失。  從存放區重新安裝將會安裝一份全新的發行套件。
 
 `wsl --unregister <DistributionName>`  
 從 WSL 取消註冊散發, 使其可以重新安裝或清除。
@@ -181,7 +181,7 @@ PS C:\Users\sarah>
 
 WSL Config (`wslconfig.exe`) 是一種命令列工具, 可用於管理在適用于 linux 的 Windows 子系統 (WSL) 上執行的 linux 發行版本。  它可讓您列出可用的發行版本、設定預設的散發, 以及卸載發行版本。
 
-雖然 WSL Config 對於跨越或協調散發的設定很有説明, 但每個 Linux 散發套件會獨立管理自己的設定。  若要查看散發特定的命令, `[distro.exe] /?`請執行。  例如 `ubuntu /?`。
+雖然 WSL Config 對於跨越或協調散發的設定很有説明, 但每個 Linux 散發套件會獨立管理自己的設定。  若要查看發行特定的命令, `[distro.exe] /?`請執行。  例如 `ubuntu /?`。
 
 若要查看 wslconfig 的所有可用選項, 請執行:`wslconfig /?`
 
@@ -200,29 +200,29 @@ Usage:
 #### <a name="list-distributions"></a>列出發行版本
 
 `wslconfig /list`  
-列出可用的 Linux 散發套件, 可供 WSL。  如果已列出散發套件, 則會加以安裝並可供使用。
+列出可供 WSL 使用的 Linux 發行套件。  如果已列出發行套件, 則會加以安裝並可供使用。
 
 `wslconfig /list /all`  
-列出所有發行版本, 包括目前無法使用的散發套件。  它們可能正在安裝、卸載或處於中斷狀態。  
+列出所有發行版本, 包括目前無法使用的發行套件。  它們可能正在安裝、卸載或處於中斷狀態。  
 
-#### <a name="set-a-default-distribution"></a>設定預設散發
+#### <a name="set-a-default-distribution"></a>設定預設發行
 
-預設 WSL 分佈是在命令列上執行`wsl`時所執行的散發。
+預設 WSL 發行是在命令列上執行`wsl`時所執行的發行版本。
 
 `wslconfig /setdefault <DistributionName>`
 
-將預設散發設定為`<DistributionName>`。
+將預設發行設定為`<DistributionName>`。
 
 **範例:**  
-`wslconfig /setdefault Ubuntu`會將預設散發設定為 Ubuntu。  現在當我執行`wsl npm init`時, 它會在 Ubuntu 中執行。  如果我執行`wsl`它, 就會開啟 Ubuntu 會話。
+`wslconfig /setdefault Ubuntu`會將預設發行設定為 Ubuntu。  現在當我執行`wsl npm init`時, 它會在 Ubuntu 中執行。  如果我執行`wsl`它, 就會開啟 Ubuntu 會話。
 
-#### <a name="unregister-and-reinstall-a-distribution"></a>取消註冊並重新安裝散發套件
+#### <a name="unregister-and-reinstall-a-distribution"></a>取消註冊並重新安裝發行套件
 
-雖然 Linux 散發套件可透過 Microsoft store 安裝, 但無法透過存放區卸載。  WSL Config 允許取消註冊/卸載發行。
+雖然 Linux 發行套件可透過 Microsoft store 安裝, 但無法透過存放區卸載。  WSL Config 允許取消註冊/卸載發行。
 
 取消註冊也允許重新安裝發佈。
 
-> **注意**：一旦取消註冊, 所有與該發佈相關聯的資料、設定和軟體都會永久遺失。  從存放區重新安裝將會安裝一份全新的散發套件。
+> **注意**：一旦取消註冊, 所有與該發佈相關聯的資料、設定和軟體都會永久遺失。  從存放區重新安裝將會安裝一份全新的發行套件。
 
 `wslconfig /unregister <DistributionName>`  
 從 WSL 取消註冊散發, 使其可以重新安裝或清除。

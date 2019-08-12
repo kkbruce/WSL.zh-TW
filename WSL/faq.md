@@ -80,7 +80,7 @@ WSL 支援 x64 和 ARM Cpu。
 
 WSL 的其中一項優點是能夠透過 Windows 和 Linux 應用程式或工具存取您的檔案。 
 
-WSL 會將您電腦的固定磁片磁碟機`/mnt/<drive>`掛接在 Linux 散發版本的資料夾底下。 例如, 您`C:`的磁片磁碟機裝載于`/mnt/c/` 
+WSL 會將您電腦的固定式磁碟機掛接在您 Linux 發行版本的 `/mnt/<drive>` 資料夾下。 例如，您的 `C:` 磁碟機掛接在 `/mnt/c/` 下。 
 
 使用您載入的磁片磁碟機, 您可以在中編輯程式碼`C:\dev\myproj\` , 例如, 使用[Visual Studio](https://visualstudio.microsoft.com/vs/) /或[VS Code](https://code.visualstudio.com/), 然後透過存取相同`/mnt/c/dev/myproj`的檔案, 在 Linux 中建立/測試該程式碼。
 
@@ -98,8 +98,8 @@ WSL 會將您電腦的固定磁片磁碟機`/mnt/<drive>`掛接在 Linux 散發�
    * 支援區分大小寫
    * 擁有權限都設定為最佳反映 Windows 許可權
 
-## <a name="why-are-there-so-many-errors-when-i-run-apt-get-upgrade"></a>當我執行 apt 時, 為什麼會發生太多錯誤-取得升級？
-有些套件會使用我們尚未實行的功能。 `udev`例如, 尚不支援, 而且會導致數`apt-get upgrade`個錯誤。
+## <a name="why-are-there-so-many-errors-when-i-run-apt-get-upgrade"></a>當我執行 apt-get upgrade 時，為什麼會發生太多錯誤？
+有些套件會使用我們尚未實作的功能。 例如，上不支援 `udev`，而且它會導致數個 `apt-get upgrade` 錯誤。
 
 若要修正與相關`udev`的問題, 請遵循下列步驟:
 
