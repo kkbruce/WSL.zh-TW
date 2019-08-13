@@ -52,7 +52,7 @@ WSL 所需的資源 (CPU、記憶體和儲存體) 比完整虛擬機器少。 WS
 ## <a name="what-does-this-mean-for-powershell"></a>這對 PowerShell 有何意義？
 使用 OSS 專案時, 在許多情況下, 從 PowerShell 提示字元拖放至 Bash 非常有用。 Bash 支援是互補的, 可強化 Windows 上的命令列價值, 讓 PowerShell 和 PowerShell 社區得以運用其他熱門技術。
 
-深入瞭解 PowerShell 小組的 blog-- [適用于 Windows 的 Bash:為什麼它非常棒, 而對 PowerShell 的意義是什麼？](https://blogs.msdn.microsoft.com/powershell/2016/04/01/bash-for-windows-why-its-awesome-and-what-it-means-for-powershell/)
+在 PowerShell 小組部落格深入了解-- [適用於 Windows 的 Bash：為什麼它非常棒，而它對 PowerShell 的意義是什麼？](https://blogs.msdn.microsoft.com/powershell/2016/04/01/bash-for-windows-why-its-awesome-and-what-it-means-for-powershell/)
 
 ## <a name="can-i-run-all-linux-apps-in-wsl"></a>我可以在 WSL 中執行所有 Linux 應用程式嗎？
 不！ WSL 是一種工具, 其目標是要讓需要他們的使用者在 Windows 上執行 Bash 和 core Linux 命令列工具。 
@@ -72,19 +72,19 @@ WSL 支援 x64 和 ARM Cpu。
 ## <a name="how-do-i-access-my-c-drive"></a>如何? 存取我的 C: 磁片磁碟機嗎？
 本機電腦上的硬碟掛接點會自動建立，並可讓您輕鬆存取 Windows 檔案系統。 
  
-**于/mnt/\<磁碟機號 >/**
+**/mnt/\<<磁碟機代號>/**
  
 使用方法的範例`cd /mnt/c`是存取 c:\
 
-## <a name="how-do-i-use-a-windows-file-with-a-linux-app"></a>如何? 搭配 Linux 應用程式使用 Windows 檔案？
+## <a name="how-do-i-use-a-windows-file-with-a-linux-app"></a>如何搭配 Linux 應用程式使用 Windows 檔案？
 
 WSL 的其中一項優點是能夠透過 Windows 和 Linux 應用程式或工具存取您的檔案。 
 
 WSL 會將您電腦的固定式磁碟機掛接在您 Linux 發行版本的 `/mnt/<drive>` 資料夾下。 例如，您的 `C:` 磁碟機掛接在 `/mnt/c/` 下。 
 
-使用您載入的磁片磁碟機, 您可以在中編輯程式碼`C:\dev\myproj\` , 例如, 使用[Visual Studio](https://visualstudio.microsoft.com/vs/) /或[VS Code](https://code.visualstudio.com/), 然後透過存取相同`/mnt/c/dev/myproj`的檔案, 在 Linux 中建立/測試該程式碼。
+使用您的已掛接磁碟機 `C:\dev\myproj\` , 例如, 使用[Visual Studio](https://visualstudio.microsoft.com/vs/) /或[VS Code](https://code.visualstudio.com/)  編輯 `C:\dev\myproj\` 中的程式碼，然後在 Linux 中透過 ``/mnt/c/dev/myproj` ` 存取相同的的檔案，來建置/測試該程式碼。
 
-> **重要注意事項**:使用 WSL 的其中一個主要限制是, 不支援使用 Windows 應用程式或工具直接存取/變更 Linux 散發版本檔案系統中的檔案。 請參閱：[不要使用 Windows 應用程式和工具變更 Linux 檔案](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
+> **重要注意事項**：使用 WSL 的其中一個主要限制是，不支援使用 Windows 應用程式或工具直接存取/變更 Linux 發行版本檔案系統中的檔案。 請參閱：[不要使用 Windows 應用程式和工具變更 Linux 檔案](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
 
 ## <a name="are-files-in-the-linux-drive-different-from-the-mounted-windows-drive"></a>Linux 磁片磁碟機中的檔案與裝載的 Windows 磁片磁碟機有何不同？
 
