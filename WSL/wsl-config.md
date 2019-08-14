@@ -1,7 +1,9 @@
 ---
 title: 管理 Linux 散發套件
 description: 參考清單和設定在適用於 Linux 的 Windows 子系統上執行的多個 Linux 散發套件。
-keywords: BashOnWindows、bash、wsl、windows、適用于 linux 的 windows 子系統、windowssubsystem、ubuntu、wsl、wslconfig
+6
+keywords: BashOnWindows、bash、wsl、windows、適用於 linux 的 windows 子系統、windowssubsystem、ubuntu、wsl、wslconfig
+
 author: scooley
 ms.author: scooley
 ms.date: 02/7/2018
@@ -17,7 +19,9 @@ ms.locfileid: "67499274"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>管理和設定適用於 Linux 的 Windows 子系統
 
-> 適用於 Windows 10 秋季建立者更新和更新版本。  請參閱我們已更新的[安裝指南](./install_guide.md), 以試用新的管理功能，並從 Microsoft store 開始執行多個 Linux 散發套件。
+
+> 適用於 Windows 10 秋季建立者更新和更新版本。 請參閱我們已更新的[安裝指南](./install_guide.md), 以試用新的管理功能，並從 Microsoft store 開始執行多個 Linux 散發套件。
+
 
 ## <a name="ways-to-run-wsl"></a>執行 WSL 的方式
 
@@ -181,7 +185,9 @@ PS C:\Users\sarah>
 
 WSL Config (`wslconfig.exe`) 是一種命令列工具, 可用於管理在適用於 linux 的 Windows 子系統 (WSL) 上執行的 linux 發行版本。  它可讓您列出可用的發行版本、設定預設的發行, 以及卸載發行版本。
 
-雖然 WSL Config 對於跨越或協調散發的設定很有説明, 但每個 Linux 散發套件會獨立管理自己的設定。  若要查看發行特定的命令, `[distro.exe] /?`請執行。  例如 `ubuntu /?`。
+
+雖然 WSL Config 對於跨越或協調發行的設定很有幫助, 但每個 Linux 發行套件會獨立管理自己的設定。 若要查看發行特定的命令, `[distro.exe] /?`請執行。 例如 `ubuntu /?`。
+
 
 若要查看 wslconfig 的所有可用選項, 請執行:`wslconfig /?`
 
@@ -207,7 +213,9 @@ Usage:
 
 #### <a name="set-a-default-distribution"></a>設定預設發行
 
-預設 WSL 發行是在命令列上執行`wsl`時所執行的發行版本。
+
+預設 WSL 分佈是在命令列上執行`wsl`時所執行的發行。
+
 
 `wslconfig /setdefault <DistributionName>`
 
@@ -273,22 +281,24 @@ WSL 支援兩個區段`automount` : `network`和。
 | enabled    | boolean                        | true         | `true`導致固定磁片磁碟機 (亦即 `C:/`或`D:/`), 以在`/mnt`底下自動裝載 DrvFs。  `false`表示磁片磁碟機不會自動掛載, 但您仍然可以手動或`fstab`透過來掛載它們。                                                                                                             |
 | mountFsTab | boolean                        | true         | `true`要`/etc/fstab`在 WSL 開始時處理的集合。 /etc/fstab 是一個檔案, 您可以在其中宣告其他檔案系統, 例如 SMB 共用。 因此, 您可以在啟動時, 在 WSL 中自動掛載這些檔案系統。                                                                                                                |
 | root       | 字串                         | `/mnt/`      | 設定將自動掛載固定磁片磁碟機的目錄。 例如, 如果您在 WSL `/windir/`中有一個目錄, 並將它指定為根, 您應該會看到掛載於的固定磁片磁碟機`/windir/c`                                                                                              |
-| 選項    | 以逗號分隔的值清單 | 空字串 | 此值會附加至預設的 DrvFs 掛接選項字串。 **只能指定 DrvFs 特有的選項。** 不支援掛接二進位檔通常會剖析成旗標的選項。 如果您想要明確指定這些選項, 必須在/etc/fstab 中包含您要執行此動作的每個磁片磁碟機 |
 
-根據預設, WSL 會將 uid 和 gid 設定為預設使用者的值 (在 Ubuntu 散發版本中, 預設使用者是以 uid = 1000, gid = 1000) 來建立。 如果使用者透過這個機碼明確指定了 gid 或 uid 選項, 將會覆寫相關聯的值。 否則, 一律會附加預設值。
+| options    | 以逗號分隔的值清單 | 空字串 | 此值會附加至預設的 DrvFs 掛載選項字串。 **只能指定 DrvFs 特有的選項。** 不支援掛載二進位檔通常會剖析成旗標的選項。 如果您想要明確指定這些選項, 必須在/etc/fstab 中包含您要執行此動作的每個磁片磁碟機 |
 
-**注意：** 這些選項會套用為所有自動掛接之磁片磁碟機的掛接選項。 若只要變更特定磁片磁碟機的選項, 請改用/etc/fstab。
 
-#### <a name="network"></a>網路
+根據預設, WSL 會將 uid 和 gid 設定為預設使用者的值 (在 Ubuntu 發行版本中, 預設使用者是以 uid = 1000, gid = 1000) 來建立。 如果使用者透過這個機碼明確指定了 gid 或 uid 選項, 將會覆寫相關聯的值。 否則, 一律會附加預設值。
+
+**注意：** 這些選項會套用為所有自動掛載之磁片磁碟機的掛載選項。 若只要變更特定磁片磁碟機的選項, 請改用/etc/fstab。
+
+#### <a name="network"></a>network
 
 區段標籤:`[network]`
 
 | key | value | 預設值 | 紀錄|
 |:----|:----|:----|:----|
-| generateHosts | boolean | `true` | `true`設定要產生`/etc/hosts`的 WSL。 `hosts`檔案包含主機名稱對應的 IP 位址的靜態對應。 |
-| generateResolvConf | boolean | `true` | `true`將 WSL 設定為`/etc/resolv.conf`[產生]。 `resolv.conf`包含可以將指定的主機名稱解析為其 IP 位址的 DNS 清單。 | 
+| generateHosts | boolean | `true` | `true`將 WSL 設定要產生`/etc/hosts`。 `hosts`檔案包含主機名稱對應的 IP 位址的靜態對應。 |
+| generateResolvConf | boolean | `true` | `true`將 WSL 設定要產生`/etc/resolv.conf`。 `resolv.conf`包含可以將指定的主機名稱解析為其 IP 位址的 DNS 清單。 | 
 
-#### <a name="interop"></a>互
+#### <a name="interop"></a>interop
 
 區段標籤:`[interop]`
 
@@ -296,5 +306,5 @@ WSL 支援兩個區段`automount` : `network`和。
 
 | key | value | 預設值 | 紀錄|
 |:----|:----|:----|:----|
-| enabled | boolean | `true` | 設定此索引鍵將決定 WSL 是否將支援啟動 Windows 進程。 |
+| enabled | boolean | `true` | 設定此索引鍵將決定 WSL 是否將支援啟動 Windows 程序。 |
 | appendWindowsPath | boolean | `true` | 設定此索引鍵將決定 WSL 是否會將 Windows path 元素新增至 $PATH 環境變數。 | 
