@@ -55,7 +55,9 @@ Windows 上的 Ubuntu 有兩個可能需要更新的元件。
    2. `apt-get upgrade`
   
 ### <a name="apt-get-upgrade-errors"></a>Apt-get upgrade 錯誤
+
 有些套件使用我們尚未實作的功能。例如，尚不支援 `udev`，而且它會導致數個 `apt-get upgrade` 錯誤。
+
 
 若要修正與相關`udev`的問題, 請遵循下列步驟:
 
@@ -85,8 +87,10 @@ Windows 上的 Ubuntu 有兩個可能需要更新的元件。
 1. 以滑鼠右鍵按一下標題列-> 屬性-> 取消核取 [使用舊版主控台]
 1. 按一下 [確定]
 
+
 ### <a name="error-0x80040154-after-windows-update"></a>Windows Update 之後遇到「錯誤: 0x80040154」
 適用於 Linux 的 Windows 子系統功能可能會在 Windows 更新期間停用。如果發生這種情況，則必須重新啟用 Windows 功能。如需如何啟用適用於 Linux 的 Windows 子系統的指示，請參閱[安裝指南](https://msdn.microsoft.com/zh-tw/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/zh-tw/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
+
 
 ### <a name="changing-the-display-language"></a>變更顯示語言
 WSL install 會嘗試自動變更 Ubuntu 地區設定, 以符合 Windows 安裝的地區設定。  如果您不想要此行為, 您可以執行此命令, 以在安裝完成後變更 Ubuntu 地區設定。  您必須重新開機 bash, 這種變更才會生效。
@@ -114,11 +118,11 @@ sudo update-locale LANG=en_US.UTF8
 在某些情況下, 關閉防火牆可讓您存取。  在某些情況下, 只安裝防火牆會顯示封鎖存取。
 
 ### <a name="permission-denied-error-when-using-ping"></a>使用 ping 時發生許可權拒絕錯誤
-#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14388-to-windows-10-anniversary-update"></a>[年度更新](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
+#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslrelease_notesbuild-14388-to-windows-10-anniversary-update"></a>[年度更新](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
 
 需要 Windows 中的系統管理員許可權, 才能在 WSL 中執行 ping。  若要執行 ping, 請以系統管理員身分在 Windows 上的 Ubuntu 上執行 Bash, 或從具有系統管理員許可權的 CMD/PowerShell 提示字元執行 bash。
 
-#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14926"></a>[組建 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
+#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslrelease_notesbuild-14926"></a>[組建 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
   不再需要系統管理員許可權。
 
 ### <a name="bash-is-hung"></a>Bash 已停止回應
@@ -147,7 +151,9 @@ systeminfo | Select-String "^OS 名稱","^OS 版本"
 ```
 
 ### <a name="confirm-wsl-is-enabled"></a>確認已啟用 WSL
+
 您可以在 PowerShell 中執行下列命令，確認已啟用適用於 Linux 的 Windows 子系統：
+
 ``` PowerShell
 Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
