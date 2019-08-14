@@ -7,12 +7,12 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: c262ddb359507c1654f0089050bfd15ec16402f9
-ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
+ms.openlocfilehash: b03d837e0ab3a371fd676e37b5c65a173824f84c
+ms.sourcegitcommit: 9175a28f04573f25338358faf61d73b1a5d1ade6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68523788"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68832121"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>適用于 Linux 的 Windows 子系統版本資訊
 
@@ -37,7 +37,7 @@ ms.locfileid: "68523788"
 * [WSL2]修正具有 wsl $ \\的\\CopyFile 停止回應
 * 將預設 umask 切換至 0022, 並將 filesystem. umask 設定新增至/etc/wsl.conf
 * 修正 wslpath 以適當地解決符號連結, 這是回歸在 19h1 [GH 4078]
-* 引進% UserProfile%\.wslconfig 檔案以調整 WSL2 設定
+* 引進% UserProfile%\\. wslconfig 檔案以調整 WSL2 設定
 ```
 [wsl2]
 kernel=<path>              # An absolute Windows path to a custom Linux kernel.
@@ -506,7 +506,7 @@ wslconfig.exe /terminate <DistributionName>
 #### <a name="wsl-is-more-configurable-with-wslconf"></a>WSL 可透過 WSL 更容易設定
 我們新增了一種方法, 讓您在每次啟動子系統時, 自動設定 WSL 中的特定功能。 這包括自動掛接選項和網路設定。 在我們的 blog 文章中深入瞭解它, 網址為: https://aka.ms/wslconf
 
-#### <a name="afunix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX 允許 WSL 和 Windows 原生進程上 Linux 進程之間的通訊端連線
+#### <a name="af_unix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX 允許 WSL 和 Windows 原生進程上 Linux 進程之間的通訊端連線
 WSL 和 Windows 應用程式現在可以透過 Unix 通訊端彼此通訊。 假設您想要在 Windows 中執行服務, 並讓 Windows 和 WSL 應用程式都能使用它。 現在, 您可以使用 Unix 通訊端來做到這一點。 在我們的 blog 文章中閱讀更多資訊, 網址為 https://aka.ms/afunixinterop
 
 ### <a name="wsl"></a>WSL
