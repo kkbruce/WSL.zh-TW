@@ -1,6 +1,6 @@
 ---
 title: WSL 2 常見問題
-description: 關於適用于 Linux 的 Windows 子系統的常見問題2
+description: 關於適用於 Linux 的 Windows 子系統 2 的常見問題集
 keywords: BashOnWindows, bash, wsl, wsl2, windows, windows subsystem for linux, windowssubsystem, ubuntu, debian, suse, windows 10, 安裝
 author: mscraigloewen
 ms.author: mscraigloewen
@@ -17,7 +17,7 @@ ms.locfileid: "68915553"
 ---
 # <a name="wsl-2-faq"></a>WSL 2 常見問題
 
-以下是適用于 Linux 2 之 Windows 子系統的常見問題 (FAQ) 清單。
+以下是適用於 WSL 2的常見問題集 (FAQ) 清單。
 
 ## <a name="does-wsl-2-use-hyper-v-will-it-be-available-on-windows-10-home"></a>WSL 2 是否使用 Hyper-v？ 是否可在 Windows 10 家用版上使用？
 
@@ -27,7 +27,7 @@ WSL 2 將在 WSL 目前可用的所有 Sku 上提供, 包括 Windows 10 家用�
 
 ## <a name="what-will-happen-to-wsl-1-will-it-be-abandoned"></a>WSL 1 會發生什麼事？ 它會被放棄嗎？
 
-我們目前沒有計劃取代 WSL 1。 您可以並存執行 WSL 1 和 WSL 2 散發版本, 並且可以隨時升級及降級任何散發版本。 將 WSL 2 新增為新的架構, 可提供更好的平臺, 讓 WSL 小組能夠提供功能, 使 WSL 成為在 Windows 中執行 Linux 環境的絕佳方式。
+我們目前沒有計劃取代 WSL 1。 您可以並存執行 WSL 1 和 WSL 2 發行版本，並且可以隨時升級及降級任何發行版本。 將 WSL 2 新增為新的架構可為 WSL 小組提供更好的平台M，讓他們能夠提供功能，使 WSL 成為在 Windows 中執行 Linux 環境的絕佳方式。
 
 ## <a name="will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox"></a>我是否能夠執行 WSL 2 和其他協力廠商虛擬化工具, 例如 VMware 或 VirtualBox？
 
