@@ -1,6 +1,6 @@
 ---
-title: 管理 Linux 發行套件
-description: 參考清單和設定在適用於 Linux 的 Windows 子系統上執行的多個 Linux 發行套件。
+title: 管理 Linux 散發套件
+description: 參考清單和設定在適用於 Linux 的 Windows 子系統上執行的多個 Linux 散發套件。
 keywords: BashOnWindows、bash、wsl、windows、適用於 linux 的 windows 子系統、windowssubsystem、ubuntu、wsl、wslconfig
 author: scooley
 ms.author: scooley
@@ -17,7 +17,7 @@ ms.locfileid: "67499274"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>管理和設定適用於 Linux 的 Windows 子系統
 
-> 適用於 Windows 10 秋季建立者更新和更新版本。  請參閱我們已更新的[安裝指南](./install_guide.md), 以試用新的管理功能, 並從 Microsoft store 開始執行多個 Linux 發行套件。
+> 適用於 Windows 10 秋季建立者更新和更新版本。 請參閱我們已更新的[安裝指南](./install_guide.md), 以試用新的管理功能，並從 Microsoft store 開始執行多個 Linux 散發套件。
 
 ## <a name="ways-to-run-wsl"></a>執行 WSL 的方式
 
@@ -29,9 +29,9 @@ ms.locfileid: "67499274"
 
 您應該使用哪一種方法取決於您所執行的作業。
 
-### <a name="launch-wsl-by-distribution"></a>依發行套件啟動 WSL
+### <a name="launch-wsl-by-distribution"></a>依散發套件啟動 WSL
 
-使用它的發行版本特定應用程式執行發行, 會在其自有的主控台視窗中啟動該發行。
+使用它的散發版本特定應用程式執行散發, 會在其自有的主控台視窗中啟動該散發。
 
 ![從 [開始] 功能表啟動 WSL](media/start-launch.png)
 
@@ -39,7 +39,7 @@ ms.locfileid: "67499274"
 
 ![從 Microsoft store 啟動 WSL](media/store-launch.png)
 
-您也可以執行, 從命令列`[distribution].exe`執行發行。
+您也可以執行，從命令列`[distribution].exe`執行散發。
 
 以這種方式從命令列執行發佈的缺點是, 它會自動將您的工作目錄從目前目錄變更為發佈的主目錄。
 
@@ -181,7 +181,7 @@ PS C:\Users\sarah>
 
 WSL Config (`wslconfig.exe`) 是一種命令列工具, 可用於管理在適用於 linux 的 Windows 子系統 (WSL) 上執行的 linux 發行版本。  它可讓您列出可用的發行版本、設定預設的發行, 以及卸載發行版本。
 
-雖然 WSL Config 對於跨越或協調發行的設定很有説明, 但每個 Linux 發行套件會獨立管理自己的設定。  若要查看發行特定的命令, `[distro.exe] /?`請執行。  例如 `ubuntu /?`。
+雖然 WSL Config 對於跨越或協調發行的設定很有幫助, 但每個 Linux 發行套件會獨立管理自己的設定。 若要查看發行特定的命令, `[distro.exe] /?`請執行。 例如 `ubuntu /?`。
 
 若要查看 wslconfig 的所有可用選項, 請執行:`wslconfig /?`
 
