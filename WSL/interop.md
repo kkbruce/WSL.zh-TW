@@ -1,6 +1,6 @@
 ---
 title: Windows 與 Linux 的互通性
-description: 說明在適用于 Linux 的 Windows 子系統上執行的 Linux 發行版本的 Windows 互通性。
+description: 說明在適用於 Linux 的 Windows 子系統上執行的 Linux 發行版本的 Windows 互通性。
 author: scooley
 ms.author: scooley
 ms.date: 12/20/2017
@@ -14,12 +14,12 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 06/14/2019
 ms.locfileid: "67040813"
 ---
-# <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>適用于 Linux 的 windows 子系統與 Windows 的互通性
+# <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>適用於 Linux 的 windows 子系統與 Windows 的互通性
 
 > **已針對秋季建立者更新進行更新。**  
 如果您執行的是「建立者更新」或「年度更新」, 請跳至 [建立[者/年度更新] 區段](interop.md#creators-update-and-anniversary-update)。
 
-適用于 Linux 的 Windows 子系統 (WSL) 會持續改善 Windows 和 Linux 之間的整合。  您可以：
+適用於 Linux 的 Windows 子系統 (WSL) 會持續改善 Windows 和 Linux 之間的整合。  您可以：
 
 1. 從 Linux 主控台叫用 Windows 二進位檔。
 1. 從 Windows 主控台叫用 Linux 二進位檔。
@@ -35,7 +35,7 @@ ms.locfileid: "67040813"
 
 1. 使用與目前的 CMD 或 PowerShell 提示相同的工作目錄。
 1. 以 WSL 預設使用者身分執行。
-1. 具有與呼叫進程和終端機相同的 Windows 系統管理許可權。
+1. 具有與發出呼叫之處理序和終端機相同的 Windows 系統管理權限。
 
 例如:
 
@@ -67,7 +67,7 @@ C:\temp> dir | wsl grep foo
 C:\temp> wsl ls -la > out.txt
 ```
 
-傳入的命令`wsl.exe`會轉送至 WSL 進程, 而不會進行修改。  檔案路徑必須以 WSL 格式指定。
+傳遞到 `wsl.exe` 的命令會原封不動地轉送到 WSL 處理序。  檔案路徑必須以 WSL 格式指定。
 
 具有路徑的範例:
 
@@ -81,7 +81,7 @@ C:\temp> wsl ls -la "/mnt/c/Program Files"
 
 ## <a name="run-windows-tools-from-wsl"></a>從 WSL 執行 Windows 工具
 
-WSL 可以使用, 直接從 WSL 命令列叫用`[binary name].exe`Windows 二進位檔。  例如： `notepad.exe` 。  為了讓 windows 可執行檔更容易執行, windows 路徑會包含在`$PATH` Linux 的秋季建立者更新中。
+WSL 可以直接從 WSL 命令列呼叫 Windows 二進位檔 (使用 `[binary name].exe`)。  例如，`notepad.exe`。  為了讓 Windows 可執行檔更容易執行，在 Fall Creators Update 中，Windows 路徑會包含在 Linux `$PATH` 中。
 
 以這種方式執行的應用程式具有下列屬性:
 
@@ -214,7 +214,7 @@ $ echo 1 > /proc/sys/fs/binfmt_misc/WSLInterop
 
 1. 使用與 CMD 或 PowerShell 提示相同的工作目錄。
 1. 以 WSL 預設使用者身分執行。
-1. 具有與呼叫進程和終端機相同的 Windows 系統管理許可權。
+1. 具有與發出呼叫之處理序和終端機相同的 Windows 系統管理權限。
 
 範例：
 

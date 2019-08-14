@@ -146,7 +146,7 @@ WSL 不支援在舊版主控台中執行。 若要關閉舊版主控台:
 1. 按一下 [確定]
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>為什麼會收到「錯誤:0x80040154 「在升級 Windows 之後執行 bash .exe 嗎？
-「適用于 Linux 的 Windows 子系統」功能可能會在 Windows 更新期間停用。 如果發生這種情況, 則必須重新啟用 Windows 功能。 如需如何啟用「適用于 Linux 的 Windows 子系統」功能的指示, 請參閱[安裝指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
+「適用於 Linux 的 Windows 子系統」功能可能會在 Windows 更新期間停用。 如果發生這種情況，則必須重新啟用 Windows 功能。 如需如何啟用「適用於 Linux 的 Windows 子系統」功能的指示，請參閱[安裝指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>如何? 變更 WSL 的顯示語言？
 WSL install 會嘗試自動變更 Ubuntu 地區設定, 以符合 Windows 安裝的地區設定。 如果您不想要此行為, 您可以執行此命令, 以在安裝完成後變更 Ubuntu 地區設定。 您必須重新開機 bash, 這種變更才會生效。

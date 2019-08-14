@@ -1,7 +1,7 @@
 ---
 title: 在 Windows 10 上安裝適用於 Linux 的 Windows 子系統 (WSL)
 description: 適用於 Windows 10 上適用於 Linux 的 Windows 子系統的安裝指示。
-keywords: BashOnWindows, bash, wsl, windows, 適用於 linux 的 windows 子系統, windowssubsystem, ubuntu, debian, suse, windows 10, 安裝
+keywords: BashOnWindows, bash, wsl, windows, 適用于 linux 的 windows 子系統, windowssubsystem, ubuntu, debian, suse, windows 10, 安裝
 author: taraj
 ms.author: taraj
 ms.date: 07/23/2018
@@ -76,4 +76,4 @@ ms.locfileid: "67499281"
     
  * **WslRegisterDistribution 失敗, 發生錯誤0x8007019e**   
   * 未啟用適用於 Linux 的 Windows 子系統選用元件: 
-   * 開啟 **控制台** ->  **程式和功能**-> * * 開啟或關閉 windows 功能 * *-> 檢查**適用於 Linux 的 windows 子系統,** 或使用本文開頭所述的 PowerShell Cmdlet。
+   * 開啟 **控制台**  ->   **程式和功能**-> * * 開啟或關閉 windows 功能 * *-> 檢查**適用於 Linux 的 windows 子系統,** 或使用本文開頭所述的 PowerShell Cmdlet。
