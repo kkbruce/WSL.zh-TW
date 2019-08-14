@@ -19,7 +19,7 @@ ms.locfileid: "67308794"
 
 > 適用於 Windows Server 2019 和更新版本
 
-在 //Build2017，Microsoft 宣佈 [Windows Server 上可使用](https://blogs.technet.microsoft.com/hybridcloud/2017/05/10/windows-server-for-developers-news-from-microsoft-build-2017/)適用於 Linux 的 Windows 子系統。  這些指示逐步解說如何在 Windows Server 1709 與更新版本上執行適用於 Linux 的 Windows 子系統。
+在 //Build2017，Microsoft 宣佈 [Windows Server 上可使用](https://blogs.technet.microsoft.com/hybridcloud/2017/05/10/windows-server-for-developers-news-from-microsoft-build-2017/)適用於 Linux 的 Windows 子系統。 這些指示逐步解說如何在 Windows Server 1709 與更新版本上執行適用於 Linux 的 Windows 子系統。
 
 ## <a name="enable-the-windows-subsystem-for-linux-wsl"></a>啟用適用於 Linux 的 Windows 子系統 (WSL)
 
