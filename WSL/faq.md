@@ -21,20 +21,24 @@ ms.locfileid: "67237384"
 
 如需詳細資訊, 請參閱[about 頁面](./about.md)。
 
-## <a name="who-is-wsl-for"></a>WSL 適用於什麼人？
-這主要是適用於開發人員的工具，特別是 Web 開發人員，以及那些處理或使用開放原始碼專案的人。 這可讓想要/需要使用 Bash、常見 Linux 工具 (`sed`、`awk` 等) 以及許多 Linux 優先工具 (Ruby、Python 等) 的人在 Windows 上使用其工具鏈。
+
+## <a name="who-is-wsl-for"></a>WSL 適用於什麼人？	
+這主要是適用於開發人員的工具，特別是 Web 開發人員，以及那些處理或使用開放原始碼專案的人。這可讓想要/需要使用 Bash、常見 Linux 工具 (`sed`、`awk` 等) 以及許多 Linux 優先工具 (Ruby、Python 等) 的人在 Windows 上使用其工具鏈。
 
 ## <a name="what-can-i-do-with-wsl"></a>我可以使用 WSL 來做什麼？
-WSL 提供名為 Bash 的應用程式，當此應用程式啟動時，會開啟執行 Bash 殼層的 Windows 主控台。 使用 Bash，您可以執行命令列 Linux 工具和應用程式。 例如，輸入 `lsb_release -a` 並按 Enter：您將會看到目前正在執行之 Linux 發行版本的詳細資料：
+WWSL 提供名為 Bash 的應用程式，當此應用程式啟動時，會開啟執行 Bash 殼層的 Windows 主控台。使用 Bash，您可以執行命令列 Linux 工具和應用程式。例如，輸入 `lsb_release -a` 並按 Enter：您將會看到目前正在執行之 Linux 發行版本的詳細資料：
 
 ![發行版本詳細資料的螢幕擷取畫面](media/distro.png)
 
-您也可以從 Linux Bash 殼層存取您本機電腦的檔案系統 – 您將可以在 `/mnt` 資料夾下發現裝載的本機磁碟機。 例如，您的 `C:` 磁碟機裝載於 `/mnt/c` 下：  
+您也可以從 Linux Bash 殼層存取您本機電腦的檔案系統 – 您將可以在 `/mnt` 資料夾下發現裝載的本機磁碟機。例如，您的 `C:` 磁碟機裝載於 `/mnt/c` 下：
+
 
 ![裝載的 C 磁片磁碟機螢幕擷取畫面](media/ls.png)
 
 ## <a name="what-is-bash"></a>什麼是 Bash？
-[Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) 是熱門的文字型殼層與命令語言。 它是包含在 Ubuntu 和其他 Linux 發行版本以及 macOS 中的預設殼層。 使用者在殼層中輸入命令來執行指令碼和/或執行命令和工具以完成許多工作。
+
+[Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) 是熱門的文字型殼層與命令語言。它是包含在 Ubuntu 和其他 Linux 發行版本以及 macOS 中的預設殼層。使用者在殼層中輸入命令來執行指令碼和/或執行命令和工具以完成許多工作。
+
 
 ## <a name="how-does-this-work"></a>這是如何運作？
 查看我們的[blog](https://blogs.msdn.microsoft.com/wsl/) , 我們將詳細說明基礎技術。
@@ -52,7 +56,9 @@ WSL 所需的資源 (CPU、記憶體和儲存體) 比完整虛擬機器少。 WS
 ## <a name="what-does-this-mean-for-powershell"></a>這對 PowerShell 有何意義？
 使用 OSS 專案時, 在許多情況下, 從 PowerShell 提示字元拖放至 Bash 非常有用。 Bash 支援是互補的, 可強化 Windows 上的命令列價值, 讓 PowerShell 和 PowerShell 社區得以運用其他熱門技術。
 
-在 PowerShell 小組部落格深入了解-- [適用於 Windows 的 Bash：為什麼它非常棒，而它對 PowerShell 的意義是什麼？](https://blogs.msdn.microsoft.com/powershell/2016/04/01/bash-for-windows-why-its-awesome-and-what-it-means-for-powershell/)
+
+在 PowerShell 小組部落格深入了解 -- [適用於 Windows 的 Bash：為什麼它非常棒，而它對 PowerShell 的意義是什麼？](https://blogs.msdn.microsoft.com/powershell/2016/04/01/bash-for-windows-why-its-awesome-and-what-it-means-for-powershell/)
+
 
 ## <a name="can-i-run-all-linux-apps-in-wsl"></a>我可以在 WSL 中執行所有 Linux 應用程式嗎？
 不！ WSL 是一種工具, 其目標是要讓需要他們的使用者在 Windows 上執行 Bash 和 core Linux 命令列工具。 
@@ -70,9 +76,11 @@ WSL 不是用來支援 GUI 桌上型電腦或應用程式 (例如 GNOME、KDE �
 WSL 支援 x64 和 ARM Cpu。
 
 ## <a name="how-do-i-access-my-c-drive"></a>如何? 存取我的 C: 磁片磁碟機嗎？
-本機電腦上的硬碟掛接點會自動建立，並可讓您輕鬆存取 Windows 檔案系統。 
+
+本機電腦上的硬碟掛接點會自動建立，並可讓您輕鬆存取 Windows 檔案系統。
  
-**/mnt/\<<磁碟機代號>/**
+ **/mnt/\<磁碟機代號>/**
+
  
 使用方法的範例`cd /mnt/c`是存取 c:\
 
@@ -80,11 +88,13 @@ WSL 支援 x64 和 ARM Cpu。
 
 WSL 的其中一項優點是能夠透過 Windows 和 Linux 應用程式或工具存取您的檔案。 
 
-WSL 會將您電腦的固定式磁碟機掛接在您 Linux 發行版本的 `/mnt/<drive>` 資料夾下。 例如，您的 `C:` 磁碟機掛接在 `/mnt/c/` 下。 
 
-使用您的已掛接磁碟機 `C:\dev\myproj\` , 例如, 使用[Visual Studio](https://visualstudio.microsoft.com/vs/) /或[VS Code](https://code.visualstudio.com/)  編輯 `C:\dev\myproj\` 中的程式碼，然後在 Linux 中透過 ``/mnt/c/dev/myproj` ` 存取相同的的檔案，來建置/測試該程式碼。
+WSL 會將您電腦的固定式磁碟機掛接在您 Linux 發行版本的 `/mnt/<drive>` 資料夾下。例如，您的 `C:` 磁碟機掛接在 `/mnt/c/` 下。
 
-> **重要注意事項**：使用 WSL 的其中一個主要限制是，不支援使用 Windows 應用程式或工具直接存取/變更 Linux 發行版本檔案系統中的檔案。 請參閱：[不要使用 Windows 應用程式和工具變更 Linux 檔案](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
+使用您的已掛接磁碟機，您可以使用 [Visual Studio](https://visualstudio.microsoft.com/vs/) 或 [VS Code](https://code.visualstudio.com/) 編輯 `C:\dev\myproj\` 中的程式碼，然後在 Linux 中透過 `/mnt/c/dev/myproj` 存取相同的的檔案，來建置/測試該程式碼。
+
+> **重要注意事項**：使用 WSL 的其中一個主要限制是，不支援使用 Windows 應用程式或工具直接存取/變更 Linux 發行版本檔案系統中的檔案。請參閱：[不要使用 Windows 應用程式和工具變更 Linux 檔案](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
+
 
 ## <a name="are-files-in-the-linux-drive-different-from-the-mounted-windows-drive"></a>Linux 磁片磁碟機中的檔案與裝載的 Windows 磁片磁碟機有何不同？
 
@@ -99,7 +109,8 @@ WSL 會將您電腦的固定式磁碟機掛接在您 Linux 發行版本的 `/mnt
    * 擁有權限都設定為最佳反映 Windows 許可權
 
 ## <a name="why-are-there-so-many-errors-when-i-run-apt-get-upgrade"></a>當我執行 apt-get upgrade 時，為什麼會發生太多錯誤？
-有些套件會使用我們尚未實作的功能。 例如，上不支援 `udev`，而且它會導致數個 `apt-get upgrade` 錯誤。
+有些套件會使用我們尚未實作的功能。例如，上不支援 `udev`，而且它會導致數個 `apt-get upgrade` 錯誤。
+
 
 若要修正與相關`udev`的問題, 請遵循下列步驟:
 
@@ -123,32 +134,34 @@ WSL 會將您電腦的固定式磁碟機掛接在您 Linux 發行版本的 `/mnt
     ln -s /bin/true /sbin/initctl
     ```
 
-## <a name="how-do-i-uninstall-a-wsl-distribution"></a>如何? 卸載 WSL 散發套件嗎？
+## <a name="how-do-i-uninstall-a-wsl-distribution"></a>如何解除安裝 WSL 發行套件？
 
 在 1709 (16299) 之前的組建上, 開啟命令提示字元並執行:
   ```batchfile
   lxrun /uninstall /full
   ```
   
-從存放區安裝的 WSL 散發套件可以像任何其他 Windows 應用程式一樣卸載, 方法是以滑鼠右鍵按一下應用程式磚, 然後按一下 [卸載], 或透過 PowerShell 使用[ `Remove-AppxPackage` Cmdlet](https://technet.microsoft.com/en-us/library/hh856038.aspx)。
+從市集安裝的 WSL 發行套件可以像任何其他 Windows 應用程式一樣解除安裝，方法是以滑鼠右鍵按一下應用程式磚，然後按一下 [解除安裝]，或透過 PowerShell 使用 `Remove-AppxPackage` Cmdlet](https://technet.microsoft.com/zh-tw/library/hh856038.aspx) 來解除安裝。
 
 ## <a name="why-does-ping-generate-permission-denied-errors"></a>為什麼 ping 產生許可權被拒錯誤？
 在 WSL 組建 < 14926 中, 透過提升許可權的主控台執行 ping 所需的 WSL。 此問題已在組建14926和更新版本中修正。
 
-## <a name="how-do-i-run-an-openssh-server"></a>如何? 執行 OpenSSH 伺服器？
+## <a name="how-do-i-run-an-openssh-server"></a>如何執行 OpenSSH 伺服器？
 需要 Windows 中的系統管理員許可權, 才能在 WSL 中執行 OpenSSH。 若要執行 OpenSSH 伺服器, 請以系統管理員身分在 Windows 上的 Ubuntu 上執行 Bash, 或從具有系統管理員許可權的 CMD/PowerShell 提示字元執行 bash。
 
-## <a name="why-do-i-get-error-0x80040306-when-i-try-to-install"></a>為什麼會收到「錯誤:0x80040306 "當我嘗試安裝時？
+## <a name="why-do-i-get-error-0x80040306-when-i-try-to-install"></a>當我嘗試安裝時，為什麼會收到「錯誤:0x80040306」？
 WSL 不支援在舊版主控台中執行。 若要關閉舊版主控台:
 
 1. 開啟 WSL、PowerShell 或 Cmd
 1. 以滑鼠右鍵按一下標題列-> 屬性-> 取消核取 [使用舊版主控台]
 1. 按一下 [確定]
 
-## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>為什麼會收到「錯誤:0x80040154 「在升級 Windows 之後執行 bash .exe 嗎？
-「適用於 Linux 的 Windows 子系統」功能可能會在 Windows 更新期間停用。 如果發生這種情況，則必須重新啟用 Windows 功能。 如需如何啟用「適用於 Linux 的 Windows 子系統」功能的指示，請參閱[安裝指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
 
-## <a name="how-do-i-change-the-display-language-of-wsl"></a>如何? 變更 WSL 的顯示語言？
+## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>在升級 Windows 之後執行 bash.exe 為什麼會收到「錯誤: 0x80040154」？
+「適用於 Linux 的 Windows 子系統」功能可能會在 Windows 更新期間停用。如果發生這種情況，則必須重新啟用 Windows 功能。如需如何啟用「適用於 Linux 的 Windows 子系統」功能的指示，請參閱[安裝指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
+
+
+## <a name="how-do-i-change-the-display-language-of-wsl"></a>如何變更 WSL 的顯示語言？
 WSL install 會嘗試自動變更 Ubuntu 地區設定, 以符合 Windows 安裝的地區設定。 如果您不想要此行為, 您可以執行此命令, 以在安裝完成後變更 Ubuntu 地區設定。 您必須重新開機 bash, 這種變更才會生效。
 
 下列範例會將地區設定變更為 en-us:
@@ -165,12 +178,12 @@ sudo update-locale LANG=en_US.UTF8
 
 在某些情況下, 關閉防火牆可讓您存取。 在某些情況下, 只安裝防火牆會顯示封鎖存取。
 
-## <a name="how-do-i-access-a-port-from-wsl-in-windows"></a>如何? 從 Windows 中的 WSL 存取埠？
-WSL 會共用 Windows 的 IP 位址, 因為它是在 Windows 上執行。 如此一來, 您就可以存取 localhost 上的任何埠, 例如, 如果您在埠 1234 https://localhost:1234 上有 web 內容, 您可以進入 Windows 瀏覽器。
+## <a name="how-do-i-access-a-port-from-wsl-in-windows"></a>如何從 Windows 中的 WSL 存取連接？
+WSL 會共用 Windows 的 IP 位址，因為它是在 Windows 上執行。因此，您可以存取 localhost 上的任何連接埠，例如, 如果您在連接埠 1234 上有 Web 內容，您可以瀏覽 https://localhost:1234 進入 Windows 瀏覽器。
 
-## <a name="how-can-i-back-up-my-wsl-distros"></a>如何備份我的 WSL 散發版本？
+## <a name="how-can-i-back-up-my-wsl-distros"></a>如何備份我的 WSL 發行版本？
 
-備份散發版本的最佳方式是在 Windows 1809 版和更新版本中提供。 您可以使用`wsl --export`命令, 將整個散發匯出至 tarball。 接著, 您可以使用命令將`wsl --import`此散發版本匯回 WSL, 讓您可以備份和儲存 WSL 散發的狀態。 
+Windows 1809 版與更新版本是備份發行版本的最佳方式。您可以使用 `wsl --export` 命令，將整個發行版本匯出至 tarball。接著，您可以使用命令 `wsl --import` 將此發行版本匯回 WSL，讓您可以備份和儲存 WSL 發行版本的狀態。
 
 請注意, 在 Appdata 資料夾 (例如 Windows Backup) 中備份檔案的傳統備份服務將不會損毀您的 Linux 檔案。 
 
