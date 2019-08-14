@@ -21,6 +21,7 @@ ms.locfileid: "67237384"
 
 如需詳細資訊, 請參閱[about 頁面](./about.md)。
 
+
 ## <a name="who-is-wsl-for"></a>WSL 適用於什麼人？	
 這主要是適用於開發人員的工具，特別是 Web 開發人員，以及那些處理或使用開放原始碼專案的人。這可讓想要/需要使用 Bash、常見 Linux 工具 (`sed`、`awk` 等) 以及許多 Linux 優先工具 (Ruby、Python 等) 的人在 Windows 上使用其工具鏈。
 
@@ -31,10 +32,13 @@ WWSL 提供名為 Bash 的應用程式，當此應用程式啟動時，會開啟
 
 您也可以從 Linux Bash 殼層存取您本機電腦的檔案系統 – 您將可以在 `/mnt` 資料夾下發現裝載的本機磁碟機。例如，您的 `C:` 磁碟機裝載於 `/mnt/c` 下：
 
+
 ![裝載的 C 磁片磁碟機螢幕擷取畫面](media/ls.png)
 
 ## <a name="what-is-bash"></a>什麼是 Bash？
+
 [Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) 是熱門的文字型殼層與命令語言。它是包含在 Ubuntu 和其他 Linux 發行版本以及 macOS 中的預設殼層。使用者在殼層中輸入命令來執行指令碼和/或執行命令和工具以完成許多工作。
+
 
 ## <a name="how-does-this-work"></a>這是如何運作？
 查看我們的[blog](https://blogs.msdn.microsoft.com/wsl/) , 我們將詳細說明基礎技術。
@@ -52,7 +56,9 @@ WSL 所需的資源 (CPU、記憶體和儲存體) 比完整虛擬機器少。 WS
 ## <a name="what-does-this-mean-for-powershell"></a>這對 PowerShell 有何意義？
 使用 OSS 專案時, 在許多情況下, 從 PowerShell 提示字元拖放至 Bash 非常有用。 Bash 支援是互補的, 可強化 Windows 上的命令列價值, 讓 PowerShell 和 PowerShell 社區得以運用其他熱門技術。
 
+
 在 PowerShell 小組部落格深入了解 -- [適用於 Windows 的 Bash：為什麼它非常棒，而它對 PowerShell 的意義是什麼？](https://blogs.msdn.microsoft.com/powershell/2016/04/01/bash-for-windows-why-its-awesome-and-what-it-means-for-powershell/)
+
 
 ## <a name="can-i-run-all-linux-apps-in-wsl"></a>我可以在 WSL 中執行所有 Linux 應用程式嗎？
 不！ WSL 是一種工具, 其目標是要讓需要他們的使用者在 Windows 上執行 Bash 和 core Linux 命令列工具。 
@@ -70,9 +76,11 @@ WSL 不是用來支援 GUI 桌上型電腦或應用程式 (例如 GNOME、KDE �
 WSL 支援 x64 和 ARM Cpu。
 
 ## <a name="how-do-i-access-my-c-drive"></a>如何? 存取我的 C: 磁片磁碟機嗎？
+
 本機電腦上的硬碟掛接點會自動建立，並可讓您輕鬆存取 Windows 檔案系統。
  
  **/mnt/\<磁碟機代號>/**
+
  
 使用方法的範例`cd /mnt/c`是存取 c:\
 
@@ -80,11 +88,13 @@ WSL 支援 x64 和 ARM Cpu。
 
 WSL 的其中一項優點是能夠透過 Windows 和 Linux 應用程式或工具存取您的檔案。 
 
+
 WSL 會將您電腦的固定式磁碟機掛接在您 Linux 發行版本的 `/mnt/<drive>` 資料夾下。例如，您的 `C:` 磁碟機掛接在 `/mnt/c/` 下。
 
 使用您的已掛接磁碟機，您可以使用 [Visual Studio](https://visualstudio.microsoft.com/vs/) 或 [VS Code](https://code.visualstudio.com/) 編輯 `C:\dev\myproj\` 中的程式碼，然後在 Linux 中透過 `/mnt/c/dev/myproj` 存取相同的的檔案，來建置/測試該程式碼。
 
 > **重要注意事項**：使用 WSL 的其中一個主要限制是，不支援使用 Windows 應用程式或工具直接存取/變更 Linux 發行版本檔案系統中的檔案。請參閱：[不要使用 Windows 應用程式和工具變更 Linux 檔案](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
+
 
 ## <a name="are-files-in-the-linux-drive-different-from-the-mounted-windows-drive"></a>Linux 磁片磁碟機中的檔案與裝載的 Windows 磁片磁碟機有何不同？
 
@@ -100,6 +110,7 @@ WSL 會將您電腦的固定式磁碟機掛接在您 Linux 發行版本的 `/mnt
 
 ## <a name="why-are-there-so-many-errors-when-i-run-apt-get-upgrade"></a>當我執行 apt-get upgrade 時，為什麼會發生太多錯誤？
 有些套件會使用我們尚未實作的功能。例如，上不支援 `udev`，而且它會導致數個 `apt-get upgrade` 錯誤。
+
 
 若要修正與相關`udev`的問題, 請遵循下列步驟:
 
@@ -145,8 +156,10 @@ WSL 不支援在舊版主控台中執行。 若要關閉舊版主控台:
 1. 以滑鼠右鍵按一下標題列-> 屬性-> 取消核取 [使用舊版主控台]
 1. 按一下 [確定]
 
+
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>在升級 Windows 之後執行 bash.exe 為什麼會收到「錯誤: 0x80040154」？
 「適用於 Linux 的 Windows 子系統」功能可能會在 Windows 更新期間停用。如果發生這種情況，則必須重新啟用 Windows 功能。如需如何啟用「適用於 Linux 的 Windows 子系統」功能的指示，請參閱[安裝指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
+
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>如何變更 WSL 的顯示語言？
 WSL install 會嘗試自動變更 Ubuntu 地區設定, 以符合 Windows 安裝的地區設定。 如果您不想要此行為, 您可以執行此命令, 以在安裝完成後變更 Ubuntu 地區設定。 您必須重新開機 bash, 這種變更才會生效。

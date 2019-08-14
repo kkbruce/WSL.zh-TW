@@ -1,6 +1,6 @@
 ---
-title: 針對適用于 Linux 的 Windows 子系統進行疑難排解
-description: 提供在適用于 Linux 的 Windows 子系統上執行 Linux 時, 常見錯誤和使用者遇到之問題的詳細資訊。
+title: 針對適用於 Linux 的 Windows 子系統進行疑難排解
+description: 提供在適用於 Linux 的 Windows 子系統上執行 Linux 時，常見錯誤和使用者遇到之問題的詳細資訊。
 keywords: BashOnWindows、bash、wsl、windows、windowssubsystem、ubuntu
 author: scooley
 ms.author: scooley
@@ -15,7 +15,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 06/21/2019
 ms.locfileid: "67307641"
 ---
-# <a name="troubleshooting-windows-subsystem-for-linux"></a>適用于 Linux 的 Windows 子系統疑難排解
+# <a name="troubleshooting-windows-subsystem-for-linux"></a>適用於 Linux 的 Windows 子系統疑難排解
 
 ### <a name="bash-loses-network-connectivity-once-connected-to-a-vpn"></a>Bash 連接到 VPN 之後, 會失去網路連線能力
 
@@ -35,7 +35,7 @@ ms.locfileid: "67307641"
 2. `sudo mv resolv.conf resolv.conf.new`
 3. `sudo ln -s ../run/resolvconf/resolv.conf resolv.conf`
 
-### <a name="starting-wsl-or-installing-a-distribution-returns-an-error-code"></a>啟動 WSL 或安裝散發會傳回錯誤代碼
+### <a name="starting-wsl-or-installing-a-distribution-returns-an-error-code"></a>啟動 WSL 或安裝發行版本傳回錯誤碼
 
 請遵循[這些指示](https://github.com/Microsoft/WSL/blob/master/CONTRIBUTING.md#8-detailed-logs)來收集詳細記錄, 並在我們的 GitHub 上提出問題。
 
@@ -43,7 +43,7 @@ ms.locfileid: "67307641"
 
 Windows 上的 Ubuntu 有兩個可能需要更新的元件。 
 
-1. 適用于 Linux 的 Windows 子系統
+1. 適用於 Linux 的 Windows 子系統
   
    在 Windows 上的 Ubuntu 上升級 Bash 的這個部分, 將會啟用[版本](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes)資訊中的任何新修正程式概述。 請確定您已訂閱 Windows 測試人員方案, 且您的組建是最新的。 如需更精細的控制, 包括重設您的 Ubuntu 實例, 請參閱[命令參考頁面](https://msdn.microsoft.com/en-us/commandline/wsl/reference)。
 
@@ -54,8 +54,8 @@ Windows 上的 Ubuntu 有兩個可能需要更新的元件。
    1. `apt-get update`
    2. `apt-get upgrade`
   
-### <a name="apt-get-upgrade-errors"></a>Apt-取得升級錯誤
-有些套件會使用我們尚未實行的功能。 `udev`例如, 尚不支援, 而且會導致數`apt-get upgrade`個錯誤。
+### <a name="apt-get-upgrade-errors"></a>Apt-get upgrade 錯誤
+有些套件使用我們尚未實作的功能。 例如，尚不支援 `udev`，而且它會導致數個 `apt-get upgrade` 錯誤。
 
 若要修正與相關`udev`的問題, 請遵循下列步驟:
 
@@ -86,7 +86,7 @@ Windows 上的 Ubuntu 有兩個可能需要更新的元件。
 1. 按一下 [確定]
 
 ### <a name="error-0x80040154-after-windows-update"></a>"Error:0x80040154 "Windows update 之後
-適用于 Linux 的 Windows 子系統功能可能會在 Windows 更新期間停用。 如果發生這種情況, 則必須重新啟用 Windows 功能。 如需如何啟用適用于 Linux 的 Windows 子系統的指示, 請參閱[安裝指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
+適用於 Linux 的 Windows 子系統功能可能會在 Windows 更新期間停用。 如果發生這種情況，則必須重新啟用 Windows 功能。 如需如何啟用適用於 Linux 的 Windows 子系統的指示，請參閱[安裝指南](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)。
 
 ### <a name="changing-the-display-language"></a>變更顯示語言
 WSL install 會嘗試自動變更 Ubuntu 地區設定, 以符合 Windows 安裝的地區設定。  如果您不想要此行為, 您可以執行此命令, 以在安裝完成後變更 Ubuntu 地區設定。  您必須重新開機 bash, 這種變更才會生效。
@@ -114,11 +114,11 @@ sudo update-locale LANG=en_US.UTF8
 在某些情況下, 關閉防火牆可讓您存取。  在某些情況下, 只安裝防火牆會顯示封鎖存取。
 
 ### <a name="permission-denied-error-when-using-ping"></a>使用 ping 時發生許可權拒絕錯誤
-#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14388-to-windows-10-anniversary-update"></a>[年度更新](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
+#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslrelease_notesbuild-14388-to-windows-10-anniversary-update"></a>[年度更新](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
 
 需要 Windows 中的系統管理員許可權, 才能在 WSL 中執行 ping。  若要執行 ping, 請以系統管理員身分在 Windows 上的 Ubuntu 上執行 Bash, 或從具有系統管理員許可權的 CMD/PowerShell 提示字元執行 bash。
 
-#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14926"></a>[組建 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
+#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslrelease_notesbuild-14926"></a>[組建 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
   不再需要系統管理員許可權。
 
 ### <a name="bash-is-hung"></a>Bash 已停止回應
@@ -147,7 +147,7 @@ systeminfo | Select-String "^OS Name","^OS Version"
 ```
 
 ### <a name="confirm-wsl-is-enabled"></a>確認已啟用 WSL
-您可以在 PowerShell 中執行下列程式, 確認已啟用適用于 Linux 的 Windows 子系統:  
+您可以在 PowerShell 中執行下列命令，確認已啟用適用於 Linux 的 Windows 子系統：  
 ``` PowerShell
 Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
