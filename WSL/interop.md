@@ -17,9 +17,11 @@ ms.locfileid: "67040813"
 # <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>適用於 Linux 的 windows 子系統與 Windows 的互通性
 
 > **已針對秋季建立者更新進行更新。**  
-如果您執行的是「建立者更新」或「年度更新」, 請跳至 [建立[者/年度更新] 區段](interop.md#creators-update-and-anniversary-update)。
+如果您執行的是 Creators Update 或「年度更新版」，請跳至[Creators/年度更新版一節](interop.md#creators-update-and-anniversary-update)。
 
-適用於 Linux 的 Windows 子系統 (WSL) 會持續改善 Windows 和 Linux 之間的整合。  您可以：
+
+適用於 Linux 的 Windows 子系統 (WSL) 會持續改善 Windows 和 Linux 之間的整合。您可以：
+
 
 1. 從 Linux 主控台叫用 Windows 二進位檔。
 1. 從 Windows 主控台叫用 Linux 二進位檔。
@@ -67,7 +69,9 @@ C:\temp> dir | wsl grep foo
 C:\temp> wsl ls -la > out.txt
 ```
 
-傳遞到 `wsl.exe` 的命令會原封不動地轉送到 WSL 處理序。  檔案路徑必須以 WSL 格式指定。
+
+傳遞到 `wsl.exe` 的命令會原封不動地轉送到 WSL 處理序。檔案路徑必須以 WSL 格式指定。
+
 
 具有路徑的範例:
 
@@ -81,7 +85,9 @@ C:\temp> wsl ls -la "/mnt/c/Program Files"
 
 ## <a name="run-windows-tools-from-wsl"></a>從 WSL 執行 Windows 工具
 
-WSL 可以直接從 WSL 命令列呼叫 Windows 二進位檔 (使用 `[binary name].exe`)。  例如，`notepad.exe`。  為了讓 Windows 可執行檔更容易執行，在 Fall Creators Update 中，Windows 路徑會包含在 Linux `$PATH` 中。
+
+WSL 可以直接從 WSL 命令列呼叫 Windows 二進位檔 (使用 `[binary name].exe`)。例如，`notepad.exe`。為了讓 Windows 可執行檔更容易執行，在 Fall Creators Update 中，Windows 路徑會包含在 Linux `$PATH` 中。
+
 
 以這種方式執行的應用程式具有下列屬性:
 
@@ -115,7 +121,9 @@ $ cmd.exe /c dir
 <- contents of C:\ ->
 ```
 
-Windows 二進位檔必須包含副檔名、符合檔案大小寫，而且必須是可執行檔。  非可執行檔包括指令碼。  CMD 原生命令 (如 `dir`) 可以使用 `cmd.exe /C` 命令來執行。
+
+Windows 二進位檔必須包含副檔名、符合檔案大小寫，而且必須是可執行檔。非可執行檔包括指令碼。CMD 原生命令 (如 `dir`) 可以使用 `cmd.exe /C` 命令來執行。
+
 
 範例：
 
@@ -157,13 +165,15 @@ C:\temp>dir | findstr foo.txt
 
 ## <a name="share-environment-variables-between-windows-and-wsl"></a>在 Windows 和 WSL 之間共用環境變數
 
-> 適用於 Windows 測試人員組建 17063 與更新版本。
+
+> 適用於 Windows 測試人員組建17063和更新版本。
+
 
 在 17063之 前，只有 WSL 可以存取的 Windows 環境變數是 `PATH` (因此您可以從 WSL 下啟動 Win32 可執行檔)。
 
 從 17063 開始，WSL 和 Windows 就共用新的 `WSLENV`，這是為了橋接在 WSL 上執行之 Windows 和 Linux 發行版本而建立的特殊環境變數。
 
-的`WSLENV`屬性:
+`WSLENV`的屬性:
 
 * 它是共用的;它存在於 Windows 和 WSL 環境中。
 * 這是要在 Windows 和 WSL 之間共用的環境變數清單。
@@ -171,7 +181,7 @@ C:\temp>dir | findstr foo.txt
 
 `WSLENV` 中有四個可用的旗標，以影響該環境變數的轉譯方式。
 
-`WSLENV`旗幟
+WSLENV` 旗標：	
 
 * `/p`-轉譯 WSL/Linux 樣式路徑和 Win32 路徑之間的路徑。
 * `/l`-指出環境變數是路徑的清單。
@@ -214,7 +224,9 @@ $ echo 1 > /proc/sys/fs/binfmt_misc/WSLInterop
 
 1. 使用與 CMD 或 PowerShell 提示相同的工作目錄。
 1. 以 WSL 預設使用者身分執行。
-1. 具有與發出呼叫之處理序和終端機相同的 Windows 系統管理權限。
+
+3. 具有與發出呼叫之程序和終端機相同的 Windows 系統管理權限。
+
 
 範例：
 
@@ -239,7 +251,9 @@ C:\temp> dir | bash -c "grep foo"
 C:\temp> bash -c "ls -la" > out.txt
 ```
 
-傳遞到 `bash -c` 的 WSL 命令會原封不動地轉送到 WSL 處理序。  檔案路徑必須以 WSL 格式指定，而且您必須將其中的相關字元逸出。 範例：
+
+傳遞到 `bash -c` 的 WSL 命令會原封不動地轉送到 WSL 處理序。檔案路徑必須以 WSL 格式指定，而且您必須將其中的相關字元逸出。範例：
+
 
 ```console
 C:\temp> bash -c "ls -la /proc/cpuinfo"
@@ -251,10 +265,12 @@ C:\temp> bash -c "ls -la \"/mnt/c/Program Files\""
 
 ### <a name="invoking-windows-binaries-from-wsl"></a>從 WSL 叫用 Windows 二進位檔
 
-適用於 Linux 的 Windows 子系統可以直接從 WSL 命令列叫用 Windows 二進位檔。  以這種方式執行的應用程式具有下列屬性:
+
+適用於 Linux 的 Windows 子系統可以直接從 WSL 命令列叫用 Windows 二進位檔。以這種方式執行的應用程式具有下列屬性:
 
 1. 保留工作目錄作為 WSL 命令提示字元, 但下列案例所述除外。
-1. 具有與 `bash.exe` 處理序相同的權限。 
+2. 具有與 `bash.exe` 處理序相同的權限。	
+
 1. 以作用中的 Windows 使用者身分執行。
 1. 會顯示在 Windows 工作管理員中, 如同直接從命令提示字元執行一樣。
 
@@ -292,7 +308,9 @@ $ notepad.exe "C:\temp\foo.txt"
 $ notepad.exe C:\\temp\\foo.txt
 ```
 
-不支援使用 Windows 應用程式修改位於 VolFs `/mnt/<x>`(不在下) 的檔案。  根據預設, WSL 會嘗試將 Windows 二進位檔的工作目錄維持為目前的 WSL 目錄，但是如果工作目錄是在 VolF 上，則會在執行個體建立目錄上回復。
+
+不支援使用 Windows 應用程式修改位於 VolFs (不在 `/mnt/<x>` 下的檔案)。根據預設，WSL 會嘗試將 Windows 二進位檔的工作目錄維持為目前的 WSL 目錄，但是如果工作目錄是在 VolF 上，則會在執行個體建立目錄上回復。
+
 
 例如,最初是從`C:\temp`啟動, 而目前的 WSL 目錄變更為使用者的首頁。 `bash.exe`  從`notepad.exe`使用者的主目錄呼叫時, WSL 會自動還原為`C:\temp` notepad.exe 工作目錄:
 
