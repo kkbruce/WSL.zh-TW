@@ -17,7 +17,9 @@ ms.locfileid: "67891780"
 ---
 # <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1 與 WSL 2 之間的使用者體驗變更
 
+
 此頁面會介紹 WSL 1 與 WSL 2 預覽版之間的使用者體驗差異。要注意的關鍵變更如下：
+
 
 - 將您的 Linux 應用程式將在 Linux 根檔案系統中存取的檔案放在一起, 以加快檔案效能速度
 - 在 WSL 2 preview 的初始組建中, 您將需要使用 IP 位址存取網路應用程式, 而不使用 localhost
@@ -32,6 +34,7 @@ ms.locfileid: "67891780"
 請務必將您將經常使用 Linux 應用程式存取的檔案放在 Linux 根檔案系統內，以享有檔案效能優勢。這些檔案必須位於 Linux 根檔案系統內，才能加快檔案系統存取的速度。我們也讓 Windows 應用程式可以存取 Linux 根檔案系統 (例如，檔案總管！請嘗試執行 Linux 發行版本主目錄中的 `explorer.exe`，並查看發生什麼事)，這將會大幅簡化此轉換。
 
 ## <a name="accessing-network-applications"></a>存取網路應用程式
+
 在 WSL 2 預覽版的初始組建中，您將必須使用您 Linux 發行版本的 IP 位址來存取來自 Windows 的任何 Linux 伺服器，以及使用您主機電腦的 IP 位址存取來自 Linux 的任何 Windows 伺服器。這是暫時性問題，而且這在我們的修正順序清單中的順位非常高。
 
 ### <a name="accessing-linux-applications-from-windows"></a>從 Windows 存取 Linux 應用程式
@@ -51,7 +54,9 @@ ms.locfileid: "67891780"
 - 執行命令`cat /etc/resolv.conf`並複製該字詞`nameserver`之後的 ip 位址, 以取得主機電腦的 ip 位址。 
 - 使用複製的 IP 位址連接到任何 Windows 伺服器。
 
+
 下圖顯示這種情況的範例，方式是連線到在 Windows 中執行的 node.js 伺服器 (透過 curl)。
+
 
 ![從 Windows 存取 Linux 網路應用程式](media/wsl2-network-l2w.png)
 
