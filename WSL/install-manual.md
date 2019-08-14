@@ -2,18 +2,19 @@
 title: 手動下載適用於 Linux 的 Windows 子系統 (WSL) 發行版本
 description: 如何手動下載適用於 Linux 的 Windows 子系統發行版本的指示。
 keywords: BashOnWindows, bash, wsl, windows, 適用於 linux 的 windows 子系統, WSL, windows 子系統, 發行版本, 散發版本, ubuntu, openSUSE, SLES, debian, kali
+
 author: taraj
 ms.author: taraj
 ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: bf2f2e24fb8a2db49270fb77558d4fda1828dedf
-ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
+ms.openlocfilehash: ded81ec9672d75203e0d289c551c86cd90bde606
+ms.sourcegitcommit: 9175a28f04573f25338358faf61d73b1a5d1ade6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68523775"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68832102"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>手動下載適用於 Linux 的 Windows 子系統發行版本套件
 
@@ -30,18 +31,22 @@ ms.locfileid: "68523775"
 * [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm)
 * [Ubuntu 16.04](https://aka.ms/wsl-ubuntu-1604)
 * [Debian GNU/Linux](https://aka.ms/wsl-debian-gnulinux)
-* [Kali Linux](https://aka.ms/wsl-kali-linux)
+* [Kali Linux](https://aka.ms/wsl-kali-linux-new)
 * [OpenSUSE Leap 42](https://aka.ms/wsl-opensuse-42)
 * [SUSE Linux Enterprise Server 12](https://aka.ms/wsl-sles-12)
 * [適用於 WSL 的 Fedora Remix](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
 
+
 這會導致 `<distro>.appx` 套件下載到您選擇的資料夾。遵循[安裝指示](#Installing-your-distro)來安裝您下載的發行版本。
+
 
 ## <a name="downloading-distros-via-the-command-line"></a>透過命令列下載發行版本
 如果您想要的話，也可以透過命令列下載您偏好的發行版本：
 
  ### <a name="download-using-powershell"></a>使用 PowerShell 下載
+
  若要使用 PowerShell 下載發行版本，請使用 [WebRequest](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/invoke-webrequest) Cmdlet。以下是下載 Ubuntu 16.04 的範例指示。
+
 
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
@@ -51,7 +56,9 @@ Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseB
 > 如果下載花費較長的時間, 請設定來關閉進度列`$ProgressPreference = 'SilentlyContinue'`
 
 ### <a name="download-using-curl"></a>使用 curl 下載
+
 Windows 10 春季 2018 Update (或更新版本) 包含常用的 [curl命令列公用程式](https://curl.haxx.se/)，可讓您從命令列叫用 Web 要求 (例如 HTTP GET、POST、PUT 等命令)。您可以使用 `curl.exe` 下載上述發行版本：
+
 
 ```console
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
@@ -62,7 +69,9 @@ curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 > 注意：如果您必須使用 Cmd 殼層和/或 `.bat` / `.cmd` 指令碼叫用/編寫下載步驟，使用 `curl` 可能會比較理想。
 
 ## <a name="installing-your-distro"></a>安裝發行版本
+
 如果您使用的是 Windows 10，您可以使用 PowerShell 安裝發行版本。只要瀏覽至包含上述發行版本的下載資料夾，然後在該目錄中執行下列命令即可，其中 `app_name` 其中是您發行版本 .appx 檔案的名稱。
+
 ```Powershell
 Add-AppxPackage .\app_name.appx
 ```
