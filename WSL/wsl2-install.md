@@ -20,8 +20,8 @@ ms.locfileid: "68246872"
 若要安裝並開始使用 WSL 2，請完成下列步驟：
 
 - 啟用「虛擬機器平臺」選用元件
-- 使用命令列設定 WSL 2 支援的分散式版
-- 驗證分散式版本使用的 WSL 版本
+- 使用命令列設定 WSL 2 支援的發行版本
+- 驗證發行版本本使用的 WSL 版本
 
 請注意，您必須執行 Windows 10 組建 18917 或更新版本才能使用 WSL 2，而且必須已安裝 WSL (您可以在[這裡](./install-win10.md)找到相關指示)。 
 
@@ -33,27 +33,27 @@ ms.locfileid: "68246872"
 
 啟用這些變更之後，電腦需要重新開機。
 
-## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a>使用命令列設定 WSL 2 支援的分散式版
+## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a>使用命令列設定 WSL 2 支援的發行版本
 
 在 PowerShell 中執行：
 
 `wsl --set-version <Distro> 2`
 
-而且，請務必將 `<Distro>` 取代為分散式版本實際名稱。 (您可以使用命令 `wsl -l` 來找到這些內容)。 您可以執行與上述相同的命令，隨時變更回 WSL 1，但將「2」取代為「1」。
+而且，請務必將 `<Distro>` 取代為您的實際發行版本名稱。 (您可以使用命令 `wsl -l` 來找到這些名稱)。 您可以隨時執行與上面相同的命令，但將 '2' 取代為 '1'，以變更回 WSL 1。
 
 此外，如果您要讓 WSL 2 成為您的預設架構，則可以使用以下命令來執行此動作：
 
 `wsl --set-default-version 2`
 
-這會讓您安裝的任何全新分散式版本都初始化為 WSL 2 分散式版本。
+這會讓您安裝的任何全新發行版本都初始化為 WSL 2 發行版本。
 
-## <a name="finish-with-verifying-what-versions-of-wsl-your-distro-are-using"></a>完成驗證分散式版本所使用的 WSL 版本
+## <a name="finish-with-verifying-what-versions-of-wsl-your-distro-are-using"></a>完成驗證發行版本所使用的 WSL 版本
 
-若要確認每個分散式版本使用哪個版本的 WSL，請使用下列命令：
+若要確認每個發行版本使用的 WSL 版本，請使用下列命令：
 
 `wsl --list --verbose` 或 `wsl -l -v`
 
-您於上述所選擇的分散式版本現在應該在 [版本] 欄位下顯示「2」。 現在您已完成作業，可以隨時開始使用 WSL 2 分散式版本！ 
+您在上面所選擇的發行版本現在應該在 [版本] 欄位下顯示 '2'。 現在您已完成作業，可以隨時開始使用 WSL 2 發行版本！ 
 
 ## <a name="troubleshooting"></a>疑難排解： 
 

@@ -1,6 +1,6 @@
 ---
 title: 管理 Linux 散發套件
-description: 參考清單和設定在適用于 Linux 的 Windows 子系統上執行的多個 Linux 散發套件。
+description: 參考清單和設定在適用於 Linux 的 Windows 子系統上執行的多個 Linux 散發套件。
 keywords: BashOnWindows、bash、wsl、windows、適用于 linux 的 windows 子系統、windowssubsystem、ubuntu、wsl、wslconfig
 author: scooley
 ms.author: scooley
@@ -15,13 +15,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/02/2019
 ms.locfileid: "67499274"
 ---
-# <a name="manage-and-configure-windows-subsystem-for-linux"></a>管理和設定適用于 Linux 的 Windows 子系統
+# <a name="manage-and-configure-windows-subsystem-for-linux"></a>管理和設定適用於 Linux 的 Windows 子系統
 
-> 適用于 Windows 10 秋季建立者更新和更新版本。  請參閱我們已更新的[安裝指南](./install_guide.md), 以試用新的管理功能, 並從 Microsoft store 開始執行多個 Linux 散發套件。
+> 適用於 Windows 10 秋季建立者更新和更新版本。  請參閱我們已更新的[安裝指南](./install_guide.md), 以試用新的管理功能，並從 Microsoft store 開始執行多個 Linux 散發套件。
 
 ## <a name="ways-to-run-wsl"></a>執行 WSL 的方式
 
-有許多方法可以使用適用于 Linux 的 Windows 子系統來執行 Linux。
+有許多方法可以使用適用於 Linux 的 Windows 子系統來執行 Linux。
 
 1. `[distro]`, 例如`ubuntu`
 1. `wsl.exe` 或 `bash.exe`
@@ -39,7 +39,7 @@ ms.locfileid: "67499274"
 
 ![從 Microsoft store 啟動 WSL](media/store-launch.png)
 
-您也可以執行, 從命令列`[distribution].exe`執行散發。
+您也可以執行，從命令列`[distribution].exe`執行散發。
 
 以這種方式從命令列執行發佈的缺點是, 它會自動將您的工作目錄從目前目錄變更為發佈的主目錄。
 
@@ -81,7 +81,7 @@ scooley@scooley-elmer:/mnt/c/Users/sarah$ pwd
 /mnt/c/Users/sarah
 ```
 
-不僅會`wsl`將目前的工作目錄保留在原處, 還可讓您執行單一命令以及 Windows 命令。
+`wsl`不僅會將目前的工作目錄保留在原處, 還可讓您執行單一命令以及 Windows 命令。
 
 **範例:**
 
