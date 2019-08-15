@@ -8,12 +8,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: a74f5e3f5879d0af274d2e2b10aaf05e95a97a6f
-ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
+ms.openlocfilehash: 760ca61f77f12509224458f1b44a1329d7225600
+ms.sourcegitcommit: 00e4d12bfcd0dcd53c7445ddb2f8f0d0739d20af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "67587146"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915553"
 ---
 # <a name="wsl-2-faq"></a>WSL 2 常見問題
 
@@ -27,7 +27,9 @@ WSL 2 將在 WSL 目前可用的所有 Sku 上提供, 包括 Windows 10 家用�
 
 ## <a name="what-will-happen-to-wsl-1-will-it-be-abandoned"></a>WSL 1 會發生什麼事？ 它會被放棄嗎？
 
+
 我們目前沒有計劃取代 WSL 1。您可以並存執行 WSL 1 和 WSL 2 發行版本，並且可以隨時升級及降級任何發行版本。將 WSL 2 新增為新的架構可為 WSL 小組提供更好的平台M，讓他們能夠提供功能，使 WSL 成為在 Windows 中執行 Linux 環境的絕佳方式。
+
 
 ## <a name="will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox"></a>我是否能夠執行 WSL 2 和其他協力廠商虛擬化工具, 例如 VMware 或 VirtualBox？
 
@@ -45,7 +47,9 @@ WSL 2 將在 WSL 目前可用的所有 Sku 上提供, 包括 Windows 10 家用�
 
 ## <a name="can-i-run-wsl-2-in-a-virtual-machine"></a>我可以在虛擬機器中執行 WSL 2 嗎？
 
+
 是！您必須確定虛擬機器已啟用「巢狀虛擬化」。這可以在父 Hyper-V 主機中啟用，方式是使用系統管理員權限在 PowerShell 視窗中執行下列命令：
+
 
 `Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true`
 
@@ -53,7 +57,9 @@ WSL 2 將在 WSL 目前可用的所有 Sku 上提供, 包括 Windows 10 家用�
 
 ## <a name="can-i-use-wslconf-in-wsl-2"></a>我可以在 WSL 2 中使用 wsl 嗎？
 
+
 WSL 2 支援 WSL 1 所使用的相同 WSL 檔案。這表示您在 WSL 1 發行版本中設定的任何設定選項 (例如，自動掛接 Windows 磁碟機、啟用或停用 Interop、變更 Windows 磁碟機將掛接的目錄等) 全部都能在 WSL 2 中運作。您可以在[發行版本管理](./wsl-config.md)頁面中深入了解 WSL 中的設定選項。	
+
 
  [1]: https://www.virtualbox.org/wiki/Changelog-6.0
  [2]: https://docs.microsoft.com/en-us/virtualization/api/

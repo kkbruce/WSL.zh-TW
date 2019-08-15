@@ -17,7 +17,7 @@ ms.locfileid: "67891780"
 ---
 # <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1 與 WSL 2 之間的使用者體驗變更
 
-此頁面會超越 WSL 1 與 WSL 2 preview 之間的使用者體驗差異。 要注意的關鍵變更如下:
+此頁面會介紹 WSL 1 與 WSL 2 預覽版之間的使用者體驗差異。 要注意的關鍵變更如下：
 
 - 將您的 Linux 應用程式將在 Linux 根檔案系統中存取的檔案放在一起, 以加快檔案效能速度
 - 在 WSL 2 preview 的初始組建中, 您將需要使用 IP 位址存取網路應用程式, 而不使用 localhost
@@ -32,12 +32,12 @@ ms.locfileid: "67891780"
 請務必將您將經常存取的檔案, 放在 Linux 根檔案系統內的 Linux 應用程式, 以享有檔案效能優勢。 這些檔案必須位於 Linux 根檔案系統內, 才能加快檔案系統存取的速度。 我們也可以讓 Windows 應用程式存取 Linux 根檔案系統 (例如 File Explorer! 請嘗試執行`explorer.exe .` : 在 Linux 散發版本的主目錄中, 並查看發生什麼事), 這將會大幅簡化此轉換。 
 
 ## <a name="accessing-network-applications"></a>存取網路應用程式
-在 WSL 2 preview 的初始組建中, 您必須使用您的 Linux 散發版本的 IP 位址, 以及使用您主機電腦 IP 位址的 Linux 中的任何 Windows 伺服器, 從 Windows 存取任何 Linux 伺服器。 這是暫時性的專案, 而且在我們的優先順序清單上會非常高, 以修正此問題。
+在 WSL 2 預覽版的初始組建中，您將必須使用您 Linux 發行版本的 IP 位址來存取來自 Windows 的任何 Linux 伺服器，以及使用您主機電腦的 IP 位址存取來自 Linux 的任何 Windows 伺服器。 這是暫時性問題，而且這在我們的修正順序清單中的順位非常高。
 
 ### <a name="accessing-linux-applications-from-windows"></a>從 Windows 存取 Linux 應用程式
-如果您在 WSL 散發版本中有一部伺服器, 您將需要尋找虛擬機器的 IP 位址, 並使用該 IP 位址來連線到您的散發版本。 您可以遵循下列步驟來執行此動作:
+如果您在 WSL 發行版本中有一部伺服器，您將必須尋找裝載您發行版本之虛擬機器的 IP 位址，並使用該 IP 位址來連線到您的發行版本。 您可以遵循下列步驟來執行此動作：
 
-- 在您的 WSL 散發版本內執行命令`ip addr` , 並在`eth0`介面的`inet`值底下尋找, 以取得散發版本的 IP 位址。
+- 在您的 WSL 發行版本內執行命令 `ip addr`，並在 `eth0` 介面的 `inet` 值底下尋找它，以取得發行版本的 IP 位址。
    - 使用 grep 篩選命令的輸出 (如下所示), 可以更輕鬆地找到此`ip addr | grep eth0`程式:。
 - 使用您在上面找到的 IP 連接到 Linux 伺服器。
 
@@ -51,7 +51,7 @@ ms.locfileid: "67891780"
 - 執行命令`cat /etc/resolv.conf`並複製該字詞`nameserver`之後的 ip 位址, 以取得主機電腦的 ip 位址。 
 - 使用複製的 IP 位址連接到任何 Windows 伺服器。
 
-下圖顯示這種情況的範例, 其方式是連接到在 Windows 中執行的 node.js 伺服器 (透過捲曲)。 
+下圖顯示這種情況的範例，方式是連線到在 Windows 中執行的 node.js 伺服器 (透過 curl)。 
 
 ![從 Windows 存取 Linux 網路應用程式](media/wsl2-network-l2w.png)
 
@@ -82,7 +82,7 @@ WSL 2 會將您所有的 Linux 檔案儲存在使用 ext4 檔案系統的 VHD �
       - `sudo resize2fs /dev/sdXX`
          - 請務必使用您稍早複製的值, 您可能需要使用: `apt install resize2fs`。
 
-請注意：一般來說, 請不要使用 Windows 工具或編輯器修改、移動或存取位於 AppData 資料夾內的 WSL 相關檔案。 這麼做可能會導致您的 Linux 散發版本損毀。
+請注意：一般來說，請不要使用 Windows 工具或編輯器修改、移動或存取位於 AppData 資料夾內的 WSL 相關檔案。 這麼做可能會導致您的 Linux 發行版本損毀。
 
 ## <a name="wsl-2-will-use-some-memory-on-startup"></a>WSL 2 會在啟動時使用一些記憶體
 WSL 2 會在實際的 Linux 核心上使用輕量公用程式 VM, 以提供絕佳的檔案系統效能和完整的系統呼叫相容性, 同時仍能以 WSL 1 的速度快速、整合和回應。 此公用程式 VM 具有小型的記憶體使用量, 並會在啟動時配置虛擬位址支援的記憶體。 它會設定為從您總記憶體的一小部分開始。

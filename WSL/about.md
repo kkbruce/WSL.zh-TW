@@ -35,13 +35,13 @@ ms.locfileid: "67694629"
 ## <a name="getting-started"></a>開始使用
 
 * [在 Windows 10 上安裝 Linux](install-win10.md)
-* [流覽命令參考](reference.md)
+* [瀏覽命令參考](reference.md)
 * [閱讀常見問題](faq.md)
 
 ## <a name="team-blogs"></a>小組 Blog
 *  [包含影片和 blog 集合的總覽文章](https://blogs.msdn.microsoft.com/commandline/learn-about-windows-console-and-windows-subsystem-for-linux-wsl/)
-* [命令列的 blog](https://blogs.msdn.microsoft.com/commandline/)主動
-* [適用于 Linux 的 Windows 子系統 Blog](https://blogs.msdn.microsoft.com/wsl/)歷程記錄
+* [命令列部落格](https://blogs.msdn.microsoft.com/commandline/) (有效)
+* [適用於 Linux 的 Windows 子系統部落格](https://blogs.msdn.microsoft.com/wsl/) (歷史)
 
 ## <a name="posts--articles"></a>張貼 & 文章
 * [在 Windows 上的 Ubuntu 上執行 Bash](https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/)
