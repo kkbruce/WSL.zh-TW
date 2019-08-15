@@ -1,9 +1,7 @@
 ---
-
-標題：初始化新的 WSL Linux 發行版本
-說明：安裝適用於 WSL 的 Linux 發行版本之後，請遵循下列簡單步驟來完成初始化
-關鍵字: BashOnWindows, bash, wsl, windows, 適用於 linux 的 windows 子系統, windowssubsystem, ubuntu, debian, suse, windows 10
-
+title: 標題：初始化新的 WSL Linux 發行版本
+description: 說明：安裝適用於 WSL 的 Linux 發行版本之後，請遵循下列簡單步驟來完成初始化
+keywords: BashOnWindows, bash, wsl, windows, 適用于 linux 的 windows 子系統, windowssubsystem, ubuntu, debian, suse, windows 10
 author: taraj
 ms.author: taraj
 ms.date: 07/24/2018
@@ -23,7 +21,7 @@ ms.locfileid: "67499293"
 ## <a name="launch-a-distro"></a>啟動發行版本
 若要完成新安裝發行版本的初始化, 請啟動新的實例。 若要這麼做, 您可以按一下 Microsoft Store 應用程式中的 [啟動] 按鈕, 或從 [開始] 功能表啟動發行版本:
 
-> 秘訣：您可能想要將最常使用的發行版本釘選到 [開始] 功能表和/或您的工作列!
+> 秘訣：您可能想要將最常使用的散發版本釘選到 [開始] 功能表和/或您的工作列!
 
 ![從 [開始] 功能表啟動發行版本](media/start-menu.png)
 
