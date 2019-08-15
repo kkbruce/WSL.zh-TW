@@ -49,11 +49,11 @@ WSL 2 將在 WSL 目前可用的所有 Sku 上提供, 包括 Windows 10 家用�
 
 `Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true`
 
-請務必以您的&lt;虛擬&gt;機名稱取代 ' VMName '。
+請務必以您的虛擬機器名稱取代 &lt;VMName&gt;。
 
 ## <a name="can-i-use-wslconf-in-wsl-2"></a>我可以在 WSL 2 中使用 wsl 嗎？
 
-WSL 2 支援 WSL 1 所使用的相同 WSL 檔案。 這表示您在 WSL 1 散發版本 (例如 automounting Windows 磁片磁碟機、啟用或停用 interop、變更 Windows 磁片磁碟機將裝載的目錄等) 中設定的任何設定選項, 都將在 WSL 2 中全部工作。 您可以在[散發版本管理](./wsl-config.md)頁面中深入瞭解 WSL 中的設定選項。 
+WSL 2 支援 WSL 1 所使用的相同 WSL 檔案。 這表示您在 WSL 1 發行版本中設定的任何設定選項 (例如，自動掛接 Windows 磁碟機、啟用或停用 Interop、變更 Windows 磁碟機將掛接的目錄等) 全部都能在 WSL 2 中運作。 您可以在[發行版本管理](./wsl-config.md)頁面中深入了解 WSL 中的設定選項。 
 
  [1]: https://www.virtualbox.org/wiki/Changelog-6.0
  [2]: https://docs.microsoft.com/en-us/virtualization/api/
